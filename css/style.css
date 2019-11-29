@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada|Poppins|ZCOOL+XiaoWei&display=swap');
+/*
+
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'ZCOOL XiaoWei', serif;
+
+    font-family: 'Montserrat Subrayada', sans-serif;
+
+
+*/
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.banner{
+	width: 100%;
+	height: 350px;
+	/*background-color: #876231;*/
+	background-image: linear-gradient(rgba(30, 30, 30, 0.6), rgba(30, 30, 30, 0.6)), url('../assets/images/bg-1.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.banner-head, .banner-body{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 48px;
+	text-transform: uppercase;
+	font-family: monospace;
+	color: white;
+	font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.banner-body{
+	width: 80%;
+	margin-left: 10%;
+	align-items: flex-start;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.services {
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+	/*background-color: #345345;*/
+}
+
+.s-heading{
+	/*background-color: #876478;*/
+	width: 100%;
+	height: 20%;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-align: center;
+	font-size: 34px;
+	margin-top: 50px;
+}
+
+.s-body{
+	width: 100%;
+	height: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.s-body fieldset{
+	width: 30%;
+	min-height: 150px;
+	margin-top: 100px;
+	border: 1px solid rgb(70, 97, 116);
+	font-family: 'Poppins', sans-serif;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.s-body fieldset legend{
+	font-size: 32px;
+	font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.top-stories {
+	width: 100%;
+	margin-top: 100px;
+	/*background-color: #987123;*/
+	background-image: linear-gradient(rgba(30, 30, 30, 0.6), rgba(30, 30, 30, 0.6)), url('../assets/images/book.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.ts-heading {
+	/*background-color: #876478;*/
+	width: 100%;
+	height: 40px;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-align: center;
+	font-size: 34px;
+	color: white;
+	padding-top: 30px;
+}
+
+.top-stories-body{
+	width: 100%;
+	height: 360px;
+	/*background: #081231;*/
+	display: flex;
+	justify-content: space-around;
+	margin-top: 50px;
+	/*margin-bottom: 150px;*/
+}
+
+.storyMain{
+	width: 300px;
+	height: 300px;
+	background-color: rgb(166,239,140);
+	border-radius: 14px;
+}
+
+.story-title{
+	width: 100%;
+	height: 20%;
+	/*background-color: #098123;*/
+}
+
+.story-title section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: rgb(26, 60, 88);
+}
+
+.titleMain{
+	height: 70%;
+	/*background-color: #987123;*/
+	font-family: 'ZCOOL XiaoWei', serif;
+	font-size: 18px;
+}
+
+.authorMain{
+	height: 30%;
+	/*background-color: #ffaaaa;*/
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+}
+
+.story-thumbnail{
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.story-thumbnail img {
+	width: 80%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.story-btns {
+	width: 100%;
+	height: 20%;
+	/*background-color: #098123;*/
+	display: flex;
+}
+
+.btn-main {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background-color: #091823;*/
+}
