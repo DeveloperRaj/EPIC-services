@@ -16,6 +16,19 @@
 body{
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+}
+
+#loader {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#app{
+	display: none;
 }
 
 .banner{
@@ -52,7 +65,7 @@ body{
 
 .services {
 	width: 100%;
-	height: 200px;
+	/*height: 200px;*/
 	margin-top: 20px;
 	/*background-color: #345345;*/
 }
@@ -60,7 +73,7 @@ body{
 .s-heading{
 	/*background-color: #876478;*/
 	width: 100%;
-	height: 20%;
+	height: 50px;
 	font-family: 'Montserrat Subrayada', sans-serif;
 	text-align: center;
 	font-size: 34px;
@@ -69,16 +82,17 @@ body{
 
 .s-body{
 	width: 100%;
-	height: 80%;
+	/*height: 80%;*/
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .s-body fieldset{
 	width: 30%;
 	min-height: 150px;
-	margin-top: 100px;
+	margin-top: 30px;
 	border: 1px solid rgb(70, 97, 116);
 	font-family: 'Poppins', sans-serif;
 	padding-top: 15px;
@@ -92,9 +106,9 @@ body{
 
 .top-stories {
 	width: 100%;
-	margin-top: 100px;
+	margin-top: 30px;
 	/*background-color: #987123;*/
-	background-image: linear-gradient(rgba(30, 30, 30, 0.6), rgba(30, 30, 30, 0.6)), url('../assets/images/book.jpg');
+	/*background-image: url('../assets/images/book.jpg');*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -107,16 +121,16 @@ body{
 	font-family: 'Montserrat Subrayada', sans-serif;
 	text-align: center;
 	font-size: 34px;
-	color: white;
 	padding-top: 30px;
 }
 
 .top-stories-body{
 	width: 100%;
-	height: 360px;
+	/*height: 360px;*/
 	/*background: #081231;*/
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-top: 50px;
 	/*margin-bottom: 150px;*/
 }
@@ -124,8 +138,9 @@ body{
 .storyMain{
 	width: 300px;
 	height: 300px;
-	background-color: rgb(166,239,140);
+	background-color: #9a92f7;
 	border-radius: 14px;
+	margin-top: 20px;
 }
 
 .story-title{
@@ -185,3 +200,43 @@ body{
 	align-items: center;
 	/*background-color: #091823;*/
 }
+
+.team-members {
+	width: 100%;
+	height: 300px;
+	background-color: #4a445a;
+	margin-top: 30px;
+}
+
+.tm-heading {
+	/*background-color: #876478;*/
+	width: 100%;
+	height: 40px;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-align: center;
+	font-size: 34px;
+	padding-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+	.banner{
+		height: 250px;
+	}
+	.banner-head{
+		font-size: 38px;
+	}
+	.banner-body{
+		font-size: 14px;
+	}
+	.s-body fieldset{
+		width: 80%;
+		margin-top: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.storyMain{
+		width: 90%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+} 
