@@ -1,0 +1,18 @@
+#loader {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#notesContainer {
+	display: none;
+	width: 100%;
+	min-height: 600px;
+}
+
+.notes-container-main {
+	width: 100%;
+	height: 600px;
+}

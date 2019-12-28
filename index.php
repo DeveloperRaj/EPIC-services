@@ -119,7 +119,57 @@
 
 		<section class="team-members">
 			<section class="tm-heading">Devs And Admin</section>
+			<section class="tm-body">
+				<section class="tm-member-container">
+					<section class="tm-member-photo">
+						<img src="assets/images/john.jpg" alt="">
+					</section>
+					<section class="tm-member-about">
+					<section class="tm-member-name">John Doe</section>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sunt aspernatur modi unde perspiciatis Repudiandae voluptates quo voluptatem, rerum in.</section>
+					<section class="tm-member-social">
+						<a href="#">Facebook</a>
+						<a href="#">Instagram</a>
+						<a href="#">Linked-IN</a>
+						<a href="#">github</a>
+					</section>
+				</section>
+				<section class="tm-member-container">
+					<section class="tm-member-photo">
+						<img src="assets/images/john.jpg" alt="">
+					</section>
+					<section class="tm-member-about">
+					<section class="tm-member-name">John Doe</section>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sunt aspernatur modi unde perspiciatis Repudiandae voluptates quo voluptatem, rerum in.</section>
+					<section class="tm-member-social">
+						<a href="#">Facebook</a>
+						<a href="#">Instagram</a>
+						<a href="#">Linked-IN</a>
+						<a href="#">github</a>
+					</section>
+				</section>
+				<section class="tm-member-container">
+					<section class="tm-member-photo">
+						<img src="assets/images/john.jpg" alt="">
+					</section>
+					<section class="tm-member-about">
+					<section class="tm-member-name">John Doe</section>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sunt aspernatur modi unde perspiciatis Repudiandae voluptates quo voluptatem, rerum in.</section>
+					<section class="tm-member-social">
+						<a href="#">Facebook</a>
+						<a href="#">Instagram</a>
+						<a href="#">Linked-IN</a>
+						<a href="#">github</a>
+					</section>
+				</section>
+			</section>
 		</section>
+
+		<?php 
+
+			include 'public/footer.php'; 
+
+		?>
 	</section>
 
 	<script>

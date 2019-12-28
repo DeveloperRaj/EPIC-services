@@ -18,12 +18,13 @@ header{
 	width: 100%;
 	height: 90px;
 	background: rgb(26, 60, 88);
-	display: flex;
+	/*display: flex;*/
+	transition: height 0.5s;
 }
 
 .logo {
 	width: 30%;
-	height: 100%;
+	height: 90px;
 	/*background-color: #897123;*/
 	display: flex;
 	justify-content: center;
@@ -34,6 +35,7 @@ header{
 	font-weight: bolder;
 	color: rgb(242,242,240);
 	font-family: 'Lobster', cursive;
+	float: left;
 }
 
 .logo b{
@@ -42,12 +44,14 @@ header{
 }
 
 .navigation{
-	width: 80%;
-	height: 100%;
+	width: 70%;
+	height: 90px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	/*background-color: #786341;*/
+	float: left;
+	transition: opacity 1s;
 }
 
 .navigation a{
@@ -60,3 +64,38 @@ header{
 	font-family: monospace;
 	font-family: 'Poppins', sans-serif;
 }
+
+.menu-btn{
+	width: 30%;
+	height: 90px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-btn button{
+	height: 50%;
+	width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+	header{
+		height: 90px;
+	}
+	.logo {
+		width: 70%;
+		font-size: 26px;
+	}
+	.menu-btn{
+		display: flex;
+	}
+	.navigation{
+		width: 100%;
+		height: 160px;
+		flex-direction: column;
+		float: none;
+		background-color: rgb(26, 60, 88);
+		opacity: 0;
+		pointer-events: none;
+	}
+} 

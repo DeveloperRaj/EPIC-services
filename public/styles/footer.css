@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Poppins|ZCOOL+XiaoWei&display=swap');
+
+footer.f-main {
+	width: 100%;
+	/*height: 400px;*/
+	background-color: rgb(26, 60, 88);
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.footer-container {
+	width: 30%;
+	/*background-color: #987123;*/
+}
+
+.footer-main-header {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: 'ZCOOL XiaoWei', serif;
+	text-transform: uppercase;
+}
+
+.footer-main-body {
+	width: 95%;
+	padding: 5%;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(242,242,240);
+	text-align: center;
+}
+
+.footer-main-body a{
+	display: block;
+	color: rgb(242,242,240);
+	margin-top: 10px;
+}
+
+footer.copyright {
+	width: 100%;
+	height: 40px;
+	background-color: #18f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'ZCOOL XiaoWei', serif;
+	color: rgb(166,239,140);
+}
+
+@media only screen and (max-width: 600px) {
+	.footer-container {
+		width: 90%;
+	}
+}

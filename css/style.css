@@ -203,8 +203,8 @@ body{
 
 .team-members {
 	width: 100%;
-	height: 300px;
-	background-color: #4a445a;
+	/*height: 300px;*/
+	/*background-color: #4a445a;*/
 	margin-top: 30px;
 }
 
@@ -216,6 +216,76 @@ body{
 	text-align: center;
 	font-size: 34px;
 	padding-top: 30px;
+}
+
+.tm-body{
+	width: 100%;
+	/*height: 400px;*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.tm-member-container{
+	width: 30%;
+	height: 80%;
+	/*background-color: #834722;*/
+	border-right: 1px solid rgb(26, 60, 88);
+	margin-top: 30px;
+}
+
+.tm-member-container:nth-child(1){
+	border-left: 1px solid rgb(26, 60, 88);
+}
+
+.tm-member-photo{
+	width: 100%;
+	height: 100px;
+	/*background-color: #309485;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tm-member-photo img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #000;
+}
+
+.tm-member-about{
+	width: 80%;
+	height: 160px;
+	/*background-color: #982173;*/
+	font-size: 18px;
+	margin-left: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.tm-member-name{
+	width: 100%;
+	height: 40px;
+	/*background-color: #980345;*/
+	font-size: 24px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tm-member-social{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -238,5 +308,12 @@ body{
 		width: 90%;
 		margin-top: 10px;
 		margin-bottom: 10px;
+	}
+	.tm-body{
+		margin-top: 50px;
+	}
+	.tm-member-container{
+		width: 90%;
+		border-left: 1px solid rgb(26, 60, 88);
 	}
 } 
