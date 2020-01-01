@@ -28,6 +28,112 @@
 					Add New Note
 				</a>
 			</section>
+			<section class="nt-container">
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+				<section class="note">
+					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<section class="note-controls">
+						<a href="#">Open</a>
+						<a href="#">Edit</a>
+						<a href="#">Delete</a>
+					</section>
+				</section>
+			</section>
 		</section>
 
 		<?php 

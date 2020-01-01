@@ -76,6 +76,56 @@
 	margin-right: 15px;
 }
 
+.nt-container {
+	width: 100%;
+	/*min-height: 300px;*/
+	display: flex;
+	justify-content: space-between;
+	/*align-items: center;*/
+	flex-wrap: wrap;
+}
+
+.note {
+	width: 30%;
+	min-height: 80px;
+	border: 1px solid #919191;
+	margin: 20px;
+	display: flex;
+}
+
+.note-link {
+	width: calc(80% - 10px);
+	height: calc(100% - 10px);
+	background-color: rgb(166,239,140);
+	padding: 5px;
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+.note-controls {
+	width: 20%;
+	height: 100%;
+	background-color: rgb(26, 60, 88);
+	display: flex;
+	flex-direction: column;
+}
+
+.note-controls a { 
+	height: 30%; 
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(242,242,240);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+ }
+
 @media only screen and (max-width: 600px) {
 	.notes-options { justify-content: space-around; }
+	.note { width: 90%; margin: 10px; }
 }
