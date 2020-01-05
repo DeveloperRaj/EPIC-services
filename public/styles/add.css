@@ -1,0 +1,62 @@
+.add-note-container {
+	width: 100%;
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container {
+	width: 50%;
+	/*height: 500px;*/
+	/*border: 1px solid rgba(30, 30, 30, 0.5);*/
+}
+
+form {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.inp {
+	width: calc(90% - 7px);
+	padding-left: 7px; 
+	border: 1px solid rgba(40, 40, 40, 0.3);
+	background-color: rgba(166,239,140);
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.inp:nth-child(1) { 
+	height: 50px;
+}
+
+.inp:nth-child(2) { 
+	height: calc(300px - 20px);
+	width: calc(90% - 20px);
+	padding: 10px; 
+}
+
+.inp:nth-child(3) { 
+	height: 50px;
+}
+
+.btn {
+	width: 90px;
+	height: 50px;
+	background-color: rgb(70, 97, 116);
+	border: none;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	.form-container {
+		width: 90%; 
+	}
+} 

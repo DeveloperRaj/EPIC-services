@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Personal Notes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style/notes.css">
+	<link rel="stylesheet" href="public/styles/header.css">
+	<link rel="stylesheet" href="public/styles/footer.css">
+	<link rel="stylesheet" href="css/notes.css">
 </head>
 <body>
 	<section id="loader">
@@ -14,7 +16,7 @@
 	<section id="notesContainer">
 
 		<?php
-			include '../public/header.php';
+			include '/public/header.php';
 		?>
 
 		<section class="notes-container-main">
@@ -25,7 +27,7 @@
 						<button type="submit" name="searchNoteBtn">Search</button>
 					</form>
 				</section>
-				<a href="#" class="add-new">
+				<a href="public/add.php" class="add-new">
 					Add New Note
 				</a>
 			</section>
@@ -138,7 +140,7 @@
 		</section>
 
 		<?php 
-			include '../public/footer.php';
+			include '/public/footer.php';
 		?>
 
 	</section>
