@@ -16,7 +16,7 @@
 	<section id="notesContainer">
 
 		<?php
-			include '/public/header.php';
+			include 'public/header.php';
 		?>
 
 		<section class="notes-container-main">
@@ -140,7 +140,7 @@
 		</section>
 
 		<?php 
-			include '/public/footer.php';
+			include 'public/footer.php';
 		?>
 
 	</section>
