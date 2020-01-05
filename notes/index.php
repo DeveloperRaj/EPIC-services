@@ -21,7 +21,7 @@
 			<section class="notes-options">
 				<section class="search-notes">
 					<form method="get" action="">
-						<input type="text" name="searchNote" placeholder="Search Notes From Here">
+						<input type="text" name="searchNote" placeholder="Search By Tags">
 						<button type="submit" name="searchNoteBtn">Search</button>
 					</form>
 				</section>

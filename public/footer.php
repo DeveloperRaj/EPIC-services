@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../public/styles/footer.css">
+	<link rel="stylesheet" href="/todolist/public/styles/footer.css">
 	<title></title>
 </head>
 <body>

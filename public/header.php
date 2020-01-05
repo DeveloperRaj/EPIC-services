@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>SPrime Services</title>
-	<link rel="stylesheet" type="text/css" href="../public/styles/header.css">
+	<link rel="stylesheet" type="text/css" href="/todolist/public/styles/header.css">
 </head>
 <body>
 
