@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>SPrime Services</title>
-	<link rel="stylesheet" type="text/css" href="public/styles/header.css">
+	<link rel="stylesheet" type="text/css" href="/todolist/public/styles/header.css">
 </head>
 <body>
 
@@ -12,8 +12,8 @@
 			<button onclick="toggleMenu()">Menu</button>
 		</section>
 		<section class="navigation" id="nav">
-			<a href="index.php">Home</a>
-			<a href="notes.php">Personal Notes</a>
+			<a href="../index.php">Home</a>
+			<a href="notes/notes.php">Personal Notes</a>
 			<a href="#">Stories</a>
 			<a href="#">News Flash</a>
 			<a href="#" style="color: red; background-color: rgb(242,242,240);padding: 10px 10px 10px 10px;font-weight: bolder;">Login</a>

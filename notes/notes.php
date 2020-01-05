@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Personal Notes</title>
-	<link rel="stylesheet" href="css/notes.css">
+	<link rel="stylesheet" href="style/notes.css">
 </head>
 <body>
 	<section id="loader">
@@ -13,7 +13,7 @@
 	<section id="notesContainer">
 
 		<?php
-			include 'public/header.php';
+			include '../public/header.php';
 		?>
 
 		<section class="notes-container-main">
@@ -137,7 +137,7 @@
 		</section>
 
 		<?php 
-			include 'public/footer.php';
+			include '../public/footer.php';
 		?>
 
 	</section>
