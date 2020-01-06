@@ -1,3 +1,7 @@
+<?php 
+	include("../public/top.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +13,7 @@
 </head>
 <body>
 	<?php
-		include 'header.php';
+		include '../public/header.php';
 	?>
 
 
@@ -26,7 +30,7 @@
 
 
 	<?php
-		include 'footer.php';
+		include '../public/footer.php';
 	?>
 
 </body>

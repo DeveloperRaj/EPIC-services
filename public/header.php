@@ -11,8 +11,8 @@
 			<button onclick="toggleMenu()">Menu</button>
 		</section>
 		<section class="navigation" id="nav">
-			<a href="index.php">Home</a>
-			<a href="notes.php">Personal Notes</a>
+			<a <?php echo 'href="'. $upFolderPlaceholder . 'index.php"'?>>Home</a>
+			<a <?php echo 'href="'. $upFolderPlaceholder . 'notes/"'?>>Personal Notes</a>
 			<a href="#">Stories</a>
 			<a href="#">News Flash</a>
 			<a href="#" style="color: red; background-color: rgb(242,242,240);padding: 10px 10px 10px 10px;font-weight: bolder;">Login</a>

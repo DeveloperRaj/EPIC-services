@@ -1,3 +1,7 @@
+<?php 
+	include("public/top.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
