@@ -8,8 +8,6 @@
 	<meta charset="UTF-8">
 	<title>Personal Notes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../public/styles/header.css">
-	<link rel="stylesheet" href="../public/styles/footer.css">
 	<link rel="stylesheet" href="styles/notes.css">
 </head>
 <body>
@@ -37,107 +35,94 @@
 			</section>
 			<section class="nt-container">
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 				<section class="note">
-					<a href="#" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
 					<section class="note-controls">
-						<a href="#">Open</a>
-						<a href="#">Edit</a>
-						<a href="#">Delete</a>
+						<a href="edit.php">Edit</a>
+						<a href="delete.php">Delete</a>
 					</section>
 				</section>
 			</section>
@@ -146,7 +131,7 @@
 		<?php 
 			include '../public/footer.php';
 		?>
-
+		
 	</section>
 
 	<script>

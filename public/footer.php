@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<link rel="stylesheet" type="text/css" <?php echo 'href="'. $upFolderPlaceholder . 'public/styles/footer.css"'?>>
 </head>
 <body>
 	<footer class="f-main">

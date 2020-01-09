@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>EPIC Services</title>
+	<link rel="stylesheet" type="text/css" <?php echo 'href="'. $upFolderPlaceholder . 'public/styles/header.css"'?>>
 </head>
 <body>
 
