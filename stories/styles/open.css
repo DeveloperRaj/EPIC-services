@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|ZCOOL+XiaoWei&display=swap');
+
+#loader {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#openContainer {
+	display: none;
+	width: 100%;
+	/*min-height: 600px;*/
+}
+.open-container{  
+	width: 70%;
+	min-height: 400px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 15%;
+}
+
+.open-title {
+	font-size: 36px;
+	padding: 10px;
+	width: calc(100%-20px);
+	font-family: 'Poppins', sans-serif;
+}
+
+.open-main {
+	font-size: 22px;
+	padding: 10px;
+	width: calc(100%-20px);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.controls {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.ctrl-btn {
+	width: 120px;
+	height: 40px;
+	background-color: #01ac01;
+	border-radius: 3px;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+	.open-container { width: 90%; margin: 5%; }
+	.open-title { font-size: 28px }
+	.open-main { font-size: 18px }
+}
