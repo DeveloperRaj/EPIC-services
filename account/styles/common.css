@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Muli|Russo+One&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+main { 
+	width: 100%;
+	height: 100vh;
+	/*background-color: #faf;*/
+}
+
+.signup-image {
+	width: 60%;
+	height: 100%;
+	float: left;
+	background-image: linear-gradient(rgba(200, 170, 200, 0.5), rgba(200, 170, 200, 0.5)), url('/RHservices/walkart/assets/images/signupbg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alac{
+	width: 50%;
+	height: 30%;
+	/*background-color: #893247;*/
+}
+
+.alac-header {
+	width: 100%;
+	height: 70%;
+	/*background-color: #019209;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 28px;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.alac-button {
+	width: 100%;
+	height: 30%;
+	/*background-color: #01fa09;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signup-form {
+	width: 40%;
+	height: 100%;
+	/*background-color: #019234;*/
+	float: left;
+	overflow: auto;
+}
+
+.form-header{
+	width: 90%;
+	height: 10%;
+	margin-left: 5%;
+	/*background-color: #f9a99a;*/
+	font-size: 48px;
+	display: flex;
+	align-items: flex-end;
+    font-family: 'Russo One', sans-serif;
+}
+
+.get-data-row {
+	width: 90%;
+	margin-left: 5%;	
+	height: 20%;
+	margin-top: 1%;
+	/*background-color: #aa1233;*/
+}
+
+.data-header {
+	width: 100%;
+	height: 40%;
+	/*background-color: #2faea9;*/
+	display: flex;
+	align-items: flex-end;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.data-input {
+	width: 100%;
+	height: 60%;
+	/*background-color: #cafa61;*/
+	display: flex;
+	align-items: flex-start;
+}
+
+.inp {
+	width: 90%;
+	height: 60%;
+	border: none;
+	border-bottom: 3px solid #909090;
+    font-family: 'Muli', sans-serif;
+    font-size: 24px;
+    transition: .5s;
+}
+
+.inp:focus {
+	border-bottom: 3px solid #f00;
+}
+
+.btn {
+	width: 140px;
+	height: 50px;
+	border: none;
+	border-radius: 32px;
+	font-size: 24px;
+	font-family: 'Hammersmith One', sans-serif;
+	text-transform: uppercase;
+	background-color: #f99;
+	/*background-image: linear-gradient(90deg ,#fafafa, #202020);*/
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: black;
+}
