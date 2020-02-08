@@ -50,6 +50,10 @@ main {
 	align-items: center;
 }
 
+form {
+	height: 100%;
+}
+
 .signup-form {
 	width: 40%;
 	height: 100%;
@@ -93,7 +97,15 @@ main {
 	height: 60%;
 	/*background-color: #cafa61;*/
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
+}
+
+.data-input span{
+	margin-top: 3px;
+	color: red;
+	font-family: 'Hammersmith One', sans-serif;
+	display: none;
 }
 
 .inp {
@@ -126,4 +138,5 @@ main {
 	align-items: center;
 	text-decoration: none;
 	color: black;
+	margin-top: 20px;
 }
