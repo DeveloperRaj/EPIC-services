@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2020 at 05:25 PM
+-- Generation Time: Feb 08, 2020 at 12:39 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -36,13 +36,6 @@ CREATE TABLE `notes` (
   `notetags` text,
   `dttm` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `notes`
---
-
-INSERT INTO `notes` (`noteid`, `noteuser`, `notetitle`, `notedata`, `notetags`, `dttm`) VALUES
-(3, 'tstsub2', 'Test note 1', 'this is a complete test note\r\n\r\nthis will be deleted from database very soon\r\nhope this is gonna work\r\n\r\nfingers crossed &gt;_&lt;', 'sample,test,amazing', '2020-02-08 21:42:05');
 
 -- --------------------------------------------------------
 
@@ -96,13 +89,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `noteid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `noteid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

@@ -1,5 +1,9 @@
 <?php 
 	include("../public/top.php");
+	require '../database/conn.php';
+	if(session_id() == ''){
+		session_start();
+	}
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +15,11 @@
 	<link rel="stylesheet" href="styles/notes.css">
 </head>
 <body>
+	<?php 
+		if (!isset($_SESSION['user'])){
+			echo "<script>window.location.href = '../account/signin.php'</script>";
+		} else {
+	?>
 	<section id="loader">
 		Loading...
 	</section>
@@ -130,6 +139,7 @@
 
 		<?php 
 			include '../public/footer.php';
+		}
 		?>
 		
 	</section>

@@ -1,7 +1,9 @@
 <?php 
 	include("top.php");
 	require $upFolderPlaceholder.'database/conn.php';
-	session_start();
+	if (session_id() == ''){
+		session_start();
+	}
 
 ?>
 
