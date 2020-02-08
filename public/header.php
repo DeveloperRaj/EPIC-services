@@ -1,3 +1,10 @@
+<?php 
+	include("top.php");
+	require $upFolderPlaceholder.'database/conn.php';
+	session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +23,11 @@
 			<a <?php echo 'href="'. $upFolderPlaceholder . 'notes/"'?>>Personal Notes</a>
 			<a <?php echo 'href="'. $upFolderPlaceholder . 'stories/"'?>>Stories</a>
 			<a <?php echo 'href="'. $upFolderPlaceholder . 'news/"'?>>News Flash</a>
-			<a <?php echo 'href="'. $upFolderPlaceholder . 'account/signin.php"'?> style="color: red; background-color: rgb(242,242,240);padding: 10px 10px 10px 10px;font-weight: bolder;">Login</a>
+			<?php if (!isset($_SESSION['user'])){ ?>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'account/signin.php"'?> style="color: red; background-color: rgb(242,242,240);padding: 10px 10px 10px 10px;font-weight: bolder;">Login</a>
+			<?php } else {?>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'account/signout.php"'?> style="color: red; background-color: rgb(242,242,240);padding: 10px 10px 10px 10px;font-weight: bolder;">Logout</a>
+			<?php } ?>
 		</section>
 	</header>
 

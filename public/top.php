@@ -82,20 +82,9 @@
         
         
         //454521 CONVERTING CONTAIING FOLDERS TO PAGE NAMES section
-        function convFolder2PgTitle($folder2Convert){       //function takes in a string (folder name) & makes it more readable. 
+        /*function convFolder2PgTitle($folder2Convert){       //function takes in a string (folder name) & makes it more readable. 
             $pgTitleOutput = str_replace("-" , " / ", $folder2Convert);     //replace dashes with slashes and spaces
             $pgTitleOutput = str_replace("_" , " ", $pgTitleOutput);        //replace underscores with spaces (multi-word title)
             return ucwords($pgTitleOutput);                                 //capitalize 1st letter of each word
-        }
+        }*/
     ?>
-    <?php       //454521 ACTIVE PAGE / CURRENT PAGE setion
-        //-----MUST EDIT THIS (ctrl+F & search for  36714768356 ---------------------------------
-        //YOU MUST LIST ALL THE PAGES ON THE SITE! But $pageArrayDropDown1 means anything that's in a 1st level dropdown. You DON'T have to organize them into sepatate arrays for each individual dropdown, just put pages that are the same distance down from the $ROOT_DIRECTORY in appropriate arrays.
-        //THIS ALSO MEANS PUT $ROOT_DIRECTORY IN $pageArrayTop EVEN THOUGH IT'S NOT 1-LEVEL DOWN FROM ITSELF, IT'S ON THE SAME LEVEL OF THE NAV
-        //unused keys are OK, but pages that AREN'T in these arrays aren't so good
-        $pageArrayTop = array($ROOT_DIRECTORY, 'portfolio', 'tests', 'about');   //make a list of the ALL pages
-        $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples', 'test_1', 'test_2');     //1st level of dropdown
-        $pageArrayDropDown2 = array ('example_1');
-        $activePageArrayTop = array_fill_keys($pageArrayTop, '');       //initialize associative array to hold the page name & the text "activePage" when that page is folder in the URL. ("activePage" is a css class ). Initialize it to have keys matching $pageArrayTop, but empty
-        $activePageArrayDropDown1 = array_fill_keys($pageArrayDropDown1, '');
-        $activePageArrayDropDown2 = array_fill_keys($pageArrayDropDown2, '');

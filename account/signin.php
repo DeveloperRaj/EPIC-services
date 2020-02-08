@@ -1,5 +1,6 @@
 <?php 
 	include("../public/top.php");
+	require '../database/conn.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,22 +26,54 @@
 				</div>
 			</div>
 		</div>
-		<div class="signup-form">
-			<div class="form-header">Sign In</div>
-			<div class="get-data-row">
-				<div class="data-header">Username</div>
-				<div class="data-input"><input class="inp" type="text" name="" placeholder="Userame"></div>
+		<form method="post">
+			<div class="signup-form">
+				<div class="form-header">Sign In</div>
+				<div class="get-data-row">
+					<div class="data-header">Username</div>
+					<div class="data-input"><input class="inp" type="text" name="usrnm" placeholder="Userame"></div>
+				</div>
+				<div class="get-data-row">
+					<div class="data-header">Password</div>
+					<div class="data-input"><input class="inp" type="password" name="pswd" placeholder="Password"></div>
+				</div>
+				<div class="get-data-row">
+					<button class="btn" type="submit" name="sbmt">Sign In</button>
+				</div>
 			</div>
-			<div class="get-data-row">
-				<div class="data-header">Password</div>
-				<div class="data-input"><input class="inp" type="password" name="" placeholder="Password"></div>
-			</div>
-			<div class="get-data-row">
-				<button class="btn">Sign In</button>
-			</div>
-		</div>
+		</form>
 	</main>
 
 
 </body>
 </html>
+
+<?php 
+
+	if (isset($_POST['sbmt'])){
+
+		$user = ltrim($_POST['usrnm']);
+		$user = rtrim($user);
+
+		$password = ltrim($_POST['pswd']);
+		$password = rtrim($password);
+
+		$selectusertologinquery = "select username, pass from users where username = '$user'";
+		$res = mysqli_query($conn, $selectusertologinquery);
+		if ($res) {
+			$row = mysqli_fetch_array($res);
+			if ($password === $row[1]) {
+				session_start();
+				$_SESSION['user'] = $user;
+				echo "<script>alert('Welcome back $user');</script>";
+				echo "<script>window.location.href = '../'</script>";
+			} else {
+				echo "<script>alert('invalid username or password');</script>";
+			}
+		} else {
+			echo mysqli_error($conn);
+		}
+
+	}
+	
+?>
