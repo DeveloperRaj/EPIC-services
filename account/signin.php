@@ -65,8 +65,7 @@
 			if ($password === $row[1]) {
 				session_start();
 				$_SESSION['user'] = $user;
-				echo "<script>alert('Welcome back $user');</script>";
-				echo "<script>window.location.href = '../'</script>";
+				header("location: ../");
 			} else {
 				echo "<script>alert('invalid username or password');</script>";
 			}

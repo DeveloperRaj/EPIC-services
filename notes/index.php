@@ -1,9 +1,7 @@
 <?php 
 	include("../public/top.php");
 	require '../database/conn.php';
-	if(session_id() == ''){
-		session_start();
-	}
+	require '../database/sessmanage.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +15,7 @@
 <body>
 	<?php 
 		if (!isset($_SESSION['user'])){
-			echo "<script>window.location.href = '../account/signin.php'</script>";
+			header("location: ../account/signin.php");
 		} else {
 	?>
 	<section id="loader">
@@ -43,97 +41,33 @@
 				</a>
 			</section>
 			<section class="nt-container">
+				<?php 
+
+					$selectallnotes = "select * from notes";
+					$res = mysqli_query($conn, $selectallnotes);
+					$checkData = mysqli_num_rows($res);
+
+					if ($checkData > 0){
+						while($row = mysqli_fetch_array($res)) {
+							$noteid = $row['noteid'];
+							$noteuser = $row['noteuser'];
+							$notetitle = $row['notetitle'];
+							$openPath = "href=open.php?noteid=$noteid";
+							$editPath = "href=edit.php?noteid=$noteid";
+							$deletePath = "href=delete.php?noteid=$noteid";
+							// print_r($row);
+				?>
 				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
+					<a <?= $openPath ?> class="note-link"><?= $notetitle ?></a>
 					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
+						<a <?= $editPath ?>>Edit</a>
+						<a <?= $deletePath ?>>Delete</a>
 					</section>
 				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
-				<section class="note">
-					<a href="open.php" class="note-link">laudantium cum repellendus debitis saepe mollitia eos </a>
-					<section class="note-controls">
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
-					</section>
-				</section>
+				<?php 
+						}
+					}
+				?>
 			</section>
 		</section>
 

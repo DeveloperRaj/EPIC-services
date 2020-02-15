@@ -196,7 +196,7 @@
 				$insertinusersquery = "insert into users(username, email, fullname, pass) VALUES('$username', '$email', '$fullname', '$pass1');";
 				
 				if ($res = mysqli_query($conn, $insertinusersquery)){
-					echo "<script>window.location.href = 'signin.php'</script>";
+					header("location: signin.php");
 				} else {
 					if (mysqli_error($conn) == "Duplicate entry '$username' for key 'username'") {
 						echo "<script>alert('Username already exist');</script>";

@@ -1,6 +1,7 @@
 <?php 
 	include("../public/top.php");
 	require '../database/conn.php';
+	require '../database/sessmanage.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,9 @@
 </head>
 <body>
 	<?php
+		if (!isset($_SESSION['user'])){
+			header("location: ../account/signin.php");
+		} else {
 		include '../public/header.php';
 	?>
 
@@ -20,10 +24,17 @@
 	<section class="add-note-container">
 		<section class="form-container">
 			<form method="post">
+				
 				<input type="text" class="inp" placeholder="Title of note" name="nttl">
-				<textarea class="inp" placeholder="Note" name="ntdl" data-usage="notem"></textarea>
+
+				<textarea class="inp" placeholder="Note" name="ntdl" data-usage="notem">
+				</textarea>
+
 				<input type="text" class="inp" placeholder="Tags of note seprated by comma(,)" name="nttg" data-usage="ntags">
-				<button type="submit" name="sbmtn" class="btn">Add Note</button>
+
+				<button type="submit" name="sbmtn" class="btn">
+					Add Note
+				</button>
 			</form>
 		</section>
 	</section>
@@ -31,6 +42,7 @@
 
 	<?php
 		include '../public/footer.php';
+	}
 	?>
 
 	<script type="text/javascript">
@@ -77,12 +89,16 @@
 			$note = replace_character($note);
 			$tags = replace_character($tags);
 			$noteuser = $_SESSION['user'];
+			$title = mysqli_real_escape_string($conn, $title);
+			$note = mysqli_real_escape_string($conn, $note);
+			$tags = mysqli_real_escape_string($conn, $tags);
 			$insertinnotesquery = "INSERT INTO notes(noteuser, notetitle, notedata, notetags, dttm) VALUES ('$noteuser', '$title', '$note', '$tags', now())";
 				
 			if ($res = mysqli_query($conn, $insertinnotesquery)){
-				echo "done bro";
+				// header("location: index.php");
+				echo "<script>window.location.href='index.php'</script>";
 			} else {
-				echo mysqli_error($conn);
+				// echo mysqli_error($conn);
 			}
 
 		} else {

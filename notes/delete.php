@@ -1,5 +1,17 @@
 <?php 
+	if (!isset($_GET['noteid'])){
+		header("location: index.php");
+	} else {
+		$noteid = $_GET['noteid'];
+	}
 	include("../public/top.php");
+	require '../database/sessmanage.php';
+	if (!isset($_SESSION['user'])){
+		header("location: ../account/signin.php");
+	} else if("a" == "a"){
+		performDelete();
+	}
+	else {
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +20,7 @@
 	<meta charset="UTF-8">
 	<title>Personal Notes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="../assets/jquery.js"></script>
 	<style type="text/css">
 		@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|ZCOOL+XiaoWei&display=swap');
 		body {
@@ -74,12 +87,25 @@
 	<section class="permission-container">
 		<section class="ask">Delete can no be Undo, would you like to continue?</section>
 		<section class="ask-controls">
-			<form method="get">
-				<span><input type="checkbox">Remeber My Choice</span>
-				<button class="ctrl">continue</button>
-				<button class="ctrl">cancel</button>
+			<form method="post">
+				<span><input type="checkbox" value="atd" name="choice">Remeber My Choice</span>
+				<button class="ctrl" name="ctnu">continue</button>
+				<button class="ctrl" name="cncl">cancel</button>
 			</form>
 		</section>
 	</section>
 </body>
 </html>
+<?php }
+	
+	if (isset($_POST['cncl'])) {
+		header("location: index.php");
+	}
+
+	if (isset($_POST['ctnu'])){
+		if (isset($_POST['choice'])){
+			
+		}
+	}
+	function performDelete(){echo "string";}
+?>
