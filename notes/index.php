@@ -33,8 +33,8 @@
 			<section class="notes-options">
 				<section class="search-notes">
 					<form method="get" action="">
-						<input type="text" name="searchNote" placeholder="Search By Tags">
-						<button type="submit" name="searchNoteBtn">Search</button>
+						<input type="text" name="notetags" placeholder="Search By Tags">
+						<button type="submit" name="searchNote" value="true">Search</button>
 					</form>
 				</section>
 				<a href="add.php" class="add-new">
@@ -44,7 +44,13 @@
 			<section class="nt-container">
 				<?php 
 
-					$selectallnotes = "select * from notes where noteuser = '$noteuser'";
+					if (!isset($_GET['searchNote'])) {
+						$selectallnotes = "select * from notes where noteuser = '$noteuser'";
+					} else {
+						$tagsToSearch = $_GET['notetags'];
+						$selectallnotes = "select * from notes where noteuser = '$noteuser' and notetags like '%$tagsToSearch%'";
+					}
+					
 					$res = mysqli_query($conn, $selectallnotes);
 					$checkData = mysqli_num_rows($res);
 
@@ -67,7 +73,7 @@
 				</section>
 				<?php 
 						}
-					 } //else { echo "<script>alert('add your first note now!!');window.location.href = 'add.php';</script>"; }
+					 } 
 				?>
 			</section>
 		</section>
