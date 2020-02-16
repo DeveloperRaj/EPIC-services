@@ -9,6 +9,7 @@
 	<title>Stories</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/stories.css">
+	<script type="text/javascript" src="../assets/jquery.js"></script>
 </head>
 <body>
 	<section id="loader">
@@ -45,432 +46,96 @@
 				</section>
 			</section>
 			<section class="st-container">
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
+				</a>
 
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				</a>
+
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				</a>
+
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				</a>
+
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				</a>
+
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				</a>
+
+				<a href="open.php">
+					<section class="storyMain">
+						<section class="story-thumbnail">
+							<img src="../assets/images/GenModRender4.png">
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
+						<section class="story-title">
+							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
 						</section>
+						<section class="author">By~ Dolore veniam.</section>
+						<section class="uploadDate">24/06/2019</section>
 					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="../assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
+				</a>
 			</section>
 		</section>
 
@@ -483,7 +148,7 @@
 	<script>
 		window.onload = function(){
 			loader.style.display = "none";
-			storiesContainer.style.display = "block";
+			storiessContainer.style.display = "block";
 		}
 	</script>
 </body>
