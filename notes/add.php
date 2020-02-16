@@ -27,8 +27,7 @@
 				
 				<input type="text" class="inp" placeholder="Title of note" name="nttl">
 
-				<textarea class="inp" placeholder="Note" name="ntdl" data-usage="notem">
-				</textarea>
+				<textarea class="inp" placeholder="Note" name="ntdl" data-usage="notem"></textarea>
 
 				<input type="text" class="inp" placeholder="Tags of note seprated by comma(,)" name="nttg" data-usage="ntags">
 

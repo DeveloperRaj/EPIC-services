@@ -1,14 +1,16 @@
 <?php 
+	include("../public/top.php");
+	require '../database/sessmanage.php';
+
 	if (!isset($_GET['noteid'])){
 		header("location: index.php");
 	} else {
 		$noteid = $_GET['noteid'];
 	}
-	include("../public/top.php");
-	require '../database/sessmanage.php';
+
 	if (!isset($_SESSION['user'])){
 		header("location: ../account/signin.php");
-	} else if("a" == "a"){
+	} else if(isset($_COOKIE['alwaysdelete'])){
 		performDelete();
 	}
 	else {
@@ -104,8 +106,17 @@
 
 	if (isset($_POST['ctnu'])){
 		if (isset($_POST['choice'])){
-			
+			setcookie("alwaysdelete", "deletenotes", time() + (10 * 365 * 24 * 60 * 60));
+		}
+		performDelete();
+	}
+	function performDelete(){
+		require '../database/conn.php';
+		$deletenotequery = "delete from notes where noteid =".$_GET['noteid'];
+		$res = mysqli_query($conn, $deletenotequery);
+		$checkData = mysqli_num_rows($res);
+		if($res == 1) {
+			header("location: index.php");
 		}
 	}
-	function performDelete(){echo "string";}
-?>
+?> 

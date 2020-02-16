@@ -17,6 +17,7 @@
 		if (!isset($_SESSION['user'])){
 			header("location: ../account/signin.php");
 		} else {
+			$noteuser = $_SESSION['user'];
 	?>
 	<section id="loader">
 		Loading...
@@ -43,7 +44,7 @@
 			<section class="nt-container">
 				<?php 
 
-					$selectallnotes = "select * from notes";
+					$selectallnotes = "select * from notes where noteuser = '$noteuser'";
 					$res = mysqli_query($conn, $selectallnotes);
 					$checkData = mysqli_num_rows($res);
 
@@ -66,7 +67,7 @@
 				</section>
 				<?php 
 						}
-					}
+					 } //else { echo "<script>alert('add your first note now!!');window.location.href = 'add.php';</script>"; }
 				?>
 			</section>
 		</section>
