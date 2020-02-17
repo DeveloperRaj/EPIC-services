@@ -1,5 +1,7 @@
 <?php 
 	include("../public/top.php");
+	require '../database/conn.php';
+	require '../database/sessmanage.php';
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +33,13 @@
 					</form>
 				</section>
 				<section class="more-ops">
-					<a href="#" class="ctrl-btn">
+					<a href="index.php?filter=latest" class="ctrl-btn">
 						Latest Stories
 					</a>
-					<a href="#" class="ctrl-btn">
+					<a href="index.php?filter=weeklytop" class="ctrl-btn">
 						Top this week
 					</a>
-					<a href="#" class="ctrl-btn">
+					<a href="index.php?filter=mystories" class="ctrl-btn">
 						My Stories
 					</a>
 					<a href="add.php" class="ctrl-btn">
@@ -46,97 +48,51 @@
 				</section>
 			</section>
 			<section class="st-container">
-				<a href="open.php">
-					<section class="storyMain">
-						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
-						</section>
-						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
-						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
-					</section>
-				</a>
+				<?php 
+					if (!isset($_GET['filter'])) {
+						$selectstoriesquery = "select * from stories order by rand() limit 20";
+					} else if($_GET['filter'] == "latest") {
+						$selectstoriesquery = "select * from stories order by storyid desc limit 20";
+					} else if ($_GET['filter'] == "latest") {
 
-				<a href="open.php">
-					<section class="storyMain">
-						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
-						</section>
-						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
-						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
-					</section>
-				</a>
+					} else if ($_GET['filter'] == "mystories") {
+						if (!isset($_SESSION['user'])) {
+							echo "<script>window.location.href='../account/signin.php'</script>";
+						} else {
+							$user = $_SESSION['user'];
+							$selectstoriesquery = "select * from stories where storyuser = '$user'";
+						}
+					}
 
-				<a href="open.php">
-					<section class="storyMain">
-						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
-						</section>
-						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
-						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
-					</section>
-				</a>
+					$res = mysqli_query($conn, $selectstoriesquery);
+					$checkData = mysqli_num_rows($res);
 
-				<a href="open.php">
+					if ($checkData > 0){
+						while($row = mysqli_fetch_array($res)) {
+							$storyid = $row['storyid'];
+							$storyuser = $row['storyuser'];
+							$storytitle = $row['storytitle'];
+							$uploaddate = $row['dttm'];
+							$storyopenpath = "href=open.php?storyid=$storyid";
+				?>
+				<a <?= $storyopenpath ?>>
 					<section class="storyMain">
 						<section class="story-thumbnail">
 							<img src="../assets/images/GenModRender4.png">
 						</section>
 						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
+							<?= $storytitle ?>
 						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
+						<section class="author">By~ <?= $storyuser ?></section>
+						<section class="uploadDate"><?= $uploaddate ?></section>
 					</section>
 				</a>
-
-				<a href="open.php">
-					<section class="storyMain">
-						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
-						</section>
-						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
-						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
-					</section>
-				</a>
-
-				<a href="open.php">
-					<section class="storyMain">
-						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
-						</section>
-						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
-						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
-					</section>
-				</a>
-
-				<a href="open.php">
-					<section class="storyMain">
-						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
-						</section>
-						<section class="story-title">
-							Ut nisi minim et voluptate anim aute minim ut elit dolor ad in consequat aute officia reprehenderit laboris et nostrud sed incididunt.
-						</section>
-						<section class="author">By~ Dolore veniam.</section>
-						<section class="uploadDate">24/06/2019</section>
-					</section>
-				</a>
+				<?php 
+						}
+					 } 
+				?>
 			</section>
+			<section style="width: 100%;text-align: center;"><button onclick="window.location.reload();" style="border: none; background-color: none;margin-top: 50px;font-size: 18px;font-weight: bold">Click here to read more stories</button></section>
 		</section>
 
 		<?php 

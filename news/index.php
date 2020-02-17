@@ -57,7 +57,7 @@
 				</section></a>
 				<a href="open.php"><section class="news-main">
 					<section class="news-thumbnail"><img src="../assets/images/book.jpg"></section>
-					<section class="news-title">Ad reprehenderit proident excepteur id reprehenderit do sunt reprehenderit sunt ex occaecat in consectetur consectetur voluptate pariatur incididunt aliqua enim commodo sunt sed irure consectetur enim ullamco pariatur.</section>
+					<section class="news-title">Ad reprehenderit proident excepteur id reprehenderit do aliqua enim commodo sunt sed irure consectetur enim ullamco pariatur.</section>
 				</section></a>
 				<a href="open.php"><section class="news-main">
 					<section class="news-thumbnail"><img src="../assets/images/book.jpg"></section>
@@ -65,7 +65,7 @@
 				</section></a>
 				<a href="open.php"><section class="news-main">
 					<section class="news-thumbnail"><img src="../assets/images/book.jpg"></section>
-					<section class="news-title">Ad reprehenderit proident excepteur id reprehenderit do sunt reprehenderit sunt ex occaecat in consectetur consectetur voluptate pariatur incididunt aliqua enim commodo sunt sed irure consectetur enim ullamco pariatur.</section>
+					<section class="news-title">Ad reprehenderit proident excepteur id reprehenderit </section>
 				</section></a>
 				<a href="open.php"><section class="news-main">
 					<section class="news-thumbnail"><img src="../assets/images/book.jpg"></section>

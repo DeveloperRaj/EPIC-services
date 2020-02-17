@@ -29,6 +29,11 @@
 }
 
 .open-main {
+	width: 100%;
+}
+
+.open-main pre {
+	white-space: pre-wrap;
 	font-size: 22px;
 	padding: 10px;
 	width: calc(100%-20px);

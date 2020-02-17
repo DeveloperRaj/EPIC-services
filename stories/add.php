@@ -96,7 +96,7 @@
 				// header("location: index.php");
 				echo "<script>window.location.href='index.php'</script>";
 			} else {
-				// echo mysqli_error($conn);
+				echo mysqli_error($conn);
 			}
 
 		} else {
