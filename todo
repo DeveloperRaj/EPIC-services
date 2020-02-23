@@ -1,0 +1,27 @@
+Login:
+if user is banned, don't allow login
+
+Stories: 
+Implement Top this week filter
+Implement Thumbnail uploader
+After implementation of banning user, implement filter to not show stories from banned users
+
+News stuff:
+dynamic index page
+dynamic open page
+
+Admin panel stuff
+
+1) Add/delete news
+2) manage stories
+3) warn users
+4) ban users after 2 warnings
+
+databse tables:
+Users,
+BanStatus,
+Notes,
+Stories,
+News,
+Likes,
+Reports

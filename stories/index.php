@@ -28,8 +28,8 @@
 			<section class="stories-options">
 				<section class="search-stories">
 					<form method="get" action="">
-						<input type="text" name="searchStory" placeholder="Search By Title">
-						<button type="submit" name="searchStryBtn">Search</button>
+						<input type="text" name="storytags" placeholder="Search By Tags">
+						<button type="submit" name="searchStory" value="true">Search</button>
 					</form>
 				</section>
 				<section class="more-ops">
@@ -49,19 +49,37 @@
 			</section>
 			<section class="st-container">
 				<?php 
-					if (!isset($_GET['filter'])) {
-						$selectstoriesquery = "select * from stories order by rand() limit 20";
-					} else if($_GET['filter'] == "latest") {
-						$selectstoriesquery = "select * from stories order by storyid desc limit 20";
-					} else if ($_GET['filter'] == "latest") {
 
-					} else if ($_GET['filter'] == "mystories") {
-						if (!isset($_SESSION['user'])) {
-							echo "<script>window.location.href='../account/signin.php'</script>";
-						} else {
-							$user = $_SESSION['user'];
-							$selectstoriesquery = "select * from stories where storyuser = '$user'";
+					if (!isset($_GET['searchStory'])) {
+
+						if (!isset($_GET['filter'])) {
+							$selectstoriesquery = "select * from stories order by rand() limit 20";
+						} 
+
+						else if($_GET['filter'] == "latest") {
+							$selectstoriesquery = "select * from stories order by storyid desc limit 20";
+						} 
+
+						else if ($_GET['filter'] == "latest") {
+
+						} 
+
+						else if ($_GET['filter'] == "mystories") {
+							if (!isset($_SESSION['user'])) {
+								echo "<script>window.location.href='../account/signin.php'</script>";
+							} 
+
+							else {
+								$user = $_SESSION['user'];
+								$selectstoriesquery = "select * from stories where storyuser = '$user'";
+							}
 						}
+
+					} 
+
+					else {
+						$tagsToSearch = $_GET['storytags'];
+						$selectstoriesquery = "select * from stories where storytags like '%$tagsToSearch%'";
 					}
 
 					$res = mysqli_query($conn, $selectstoriesquery);

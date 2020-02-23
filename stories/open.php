@@ -11,6 +11,7 @@
 	<title>Stories</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/open.css">
+	<script src="../assets/jquery.js"></script>
 </head>
 <body>
 	<section id="loader">
@@ -48,12 +49,41 @@
 
 			?>
 			<section class="open-title">&bull;<?= $storytitle ?></section>
+			<section class="thumbnail"><img src="../assets/images/book.jpg"></section>
 			<section class="open-main"><pre><?= $storydata ?></pre></section>
 			<section class="controls">
-				<a href="#" class="ctrl-btn">Like</a>
-				<a href="#" class="ctrl-btn">Delete</a>
-				<a href="#" class="ctrl-btn">Delete</a>
-				<a href="#" class="ctrl-btn">Delete</a>
+				<?php 
+					if (!isset($_SESSION['user'])) {
+				?>
+						<button style="border:none" class="ctrl-btn" disabled="true">Login to like the content</button>
+				<?php
+					} else { 
+						$user = $_SESSION['user'];
+						$checkLikequery = "select * from storylikes where storyid = '$storyid' AND likeby = '$user'";
+						$res = mysqli_query($conn, $checkLikequery);
+						$checkRows = mysqli_num_rows($res);
+						$likeCounterQuery = "select * from storylikes where storyid = '$storyid'";
+						$res = mysqli_query($conn, $likeCounterQuery);
+						$totalLikes = mysqli_num_rows($res);
+						if ($checkRows == 1) {
+							$likeval = "data-like='-1'";
+							$likeText = "Unlike";
+						} else {
+							$likeval = "data-like='1'";
+							$likeText = "Like";
+						}
+				?>
+						<button style="border:none" class="ctrl-btn" id="like" <?= $likeval ?>><?= $likeText ?>(<?= $totalLikes ?>)</button>
+
+				<?php } ?>
+
+				<a style="background-color: red" href="#" class="ctrl-btn">Report</a>
+				<?php 
+					if (isset($_SESSION['user']) && $_SESSION['user'] === $storyuser) {
+				?>
+					<a <?= $editPath ?> class="ctrl-btn">Edit</a>
+					<a <?= $deletePath ?> class="ctrl-btn">Delete</a>
+				<?php } ?>
 			</section>
 		</section>
 
@@ -68,6 +98,46 @@
 			loader.style.display = "none";
 			openContainer.style.display = "block";
 		}
+
+		var getUrlParameter = function getUrlParameter(sParam) {
+		    var sPageURL = window.location.search.substring(1),
+		        sURLVariables = sPageURL.split('&'),
+		        sParameterName,
+		        i;
+
+		    for (i = 0; i < sURLVariables.length; i++) {
+		        sParameterName = sURLVariables[i].split('=');
+
+		        if (sParameterName[0] === sParam) {
+		            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+		        }
+		    }
+		};
+
+		$(document).ready(function(){
+			$("#like").on("click", function(){
+				let likeVal = Number($("#like").attr("data-like"));
+				let storyid = Number(getUrlParameter('storyid'));
+				$.ajax({
+					type: "POST",
+					url: "likeposter.php",
+					data: {
+						like: likeVal,
+						sid: storyid
+					},
+					success: (data) => {
+						if (likeVal == 1) {
+							$("#like").text(`Unlike(${data})`);
+						}
+						else {
+							$("#like").text(`Like(${data})`);
+						}
+						likeVal = (likeVal == 1) ? -1 : 1;
+						$("#like").attr("data-like", String(likeVal));
+					}
+				});
+			});
+		});
 	</script>
 </body>
 </html>

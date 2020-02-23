@@ -15,7 +15,7 @@
 <body>
 	<?php
 		if (!isset($_SESSION['user'])){
-			header("location: ../account/signin.php");
+			echo "<script>window.location.href='../accout/signin.php'</script>";
 		} else {
 		include '../public/header.php';
 	?>
@@ -26,7 +26,7 @@
 			<?php 
 
 				if (!isset($_GET['noteid'])) {
-					header("location: index.php");
+					echo "<script>window.location.href='index.php'</script>";
 				} else {
 					$selectnoteedit = "select * from notes where noteid =".$_GET['noteid'];
 					$res = mysqli_query($conn, $selectnoteedit);
@@ -37,7 +37,7 @@
 						$notedata = $row['notedata'];
 						$notetags = $row['notetags'];
 					} else {
-						header("location: index.php");
+						echo "<script>window.location.href='index.php'</script>";
 					}
 				}
 
