@@ -39,6 +39,7 @@
 						$storyuser = $row['storyuser'];
 						$storytitle = $row['storytitle'];
 						$storydata = $row['storydata'];
+						$thumbnail = $row['thumbnail'];
 						$uploaddate = $row['dttm'];
 						$editPath = "href=edit.php?storyid=$storyid";
 						$deletePath = "href=delete.php?storyid=$storyid";
@@ -49,7 +50,7 @@
 
 			?>
 			<section class="open-title">&bull;<?= $storytitle ?></section>
-			<section class="thumbnail"><img src="../assets/images/book.jpg"></section>
+			<section class="thumbnail"><img src="thumbnails/<?= $thumbnail ?>"></section>
 			<section class="open-main"><pre><?= $storydata ?></pre></section>
 			<section class="controls">
 				<?php 

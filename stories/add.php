@@ -23,15 +23,19 @@
 
 	<section class="add-story-container">
 		<section class="form-container">
-			<form method="post">
-				<input type="text" class="inp" placeholder="Title of story" name="sttl">
+			<form method="post" enctype="multipart/form-data">
+				<input type="text" class="inp" placeholder="Title" name="sttl">
 
-				<textarea class="inp" placeholder="Story" name="sdata"></textarea>
+				<textarea class="inp" placeholder="Writeup" name="sdata"></textarea>
 
-				<input type="text" class="inp" placeholder="Tags of stories seprated by comma(,)" name="stags" data-usage="stags">
+				<input type="text" class="inp" placeholder="Tags seprated by comma(,)" name="stags" data-usage="stags">
+
+				<div class="thumbnail-uploader">
+					<label>Writeup thumbnail image: </label><input type="file" name="image">
+				</div>
 
 				<button type="submit" class="btn" name="ssubmit">
-					Add story
+					Add Writeup
 				</button>
 			</form>
 		</section>
@@ -80,23 +84,44 @@
 		$title = $_POST['sttl'];
 		$story = $_POST['sdata'];
 		$tags = trim($_POST['stags']);
+		$thumbnail = $_FILES['image']['name'];
 
-		if (!empty($title) && !empty($story) && !empty($tags)) {
+		$file_extension = pathinfo($thumbnail, PATHINFO_EXTENSION);
+		$allowed_image_extension = array("png", "jpg", "jpeg");
 
-			$title = replace_character($title);
-			$story = replace_character($story);
-			$tags = replace_character($tags);
-			$storyuser = $_SESSION['user'];
-			$title = mysqli_real_escape_string($conn, $title);
-			$story = mysqli_real_escape_string($conn, $story);
-			$tags = mysqli_real_escape_string($conn, $tags);
-			$insertinstoriesquery = "INSERT INTO stories(storyuser, storytitle, storydata, storytags, dttm) VALUES ('$storyuser', '$title', '$story', '$tags', now())";
-				
-			if ($res = mysqli_query($conn, $insertinstoriesquery)){
-				// header("location: index.php");
-				echo "<script>window.location.href='index.php'</script>";
+		if (!empty($title) && !empty($story) && !empty($tags) && !empty($thumbnail)) {
+
+			if (file_exists($_FILES['image']['tmp_name'])){
+
+				if(in_array($file_extension, $allowed_image_extension)){
+
+					$title = replace_character($title);
+					$story = replace_character($story);
+					$tags = replace_character($tags);
+					$storyuser = $_SESSION['user'];
+					$title = mysqli_real_escape_string($conn, $title);
+					$story = mysqli_real_escape_string($conn, $story);
+					$tags = mysqli_real_escape_string($conn, $tags);
+
+					$target = "thumbnails/" . basename($thumbnail);
+
+					if (move_uploaded_file($_FILES["image"]["tmp_name"], $target)) {
+			  			$insertinstoriesquery = "INSERT INTO stories(storyuser, storytitle, storydata, storytags, thumbnail, dttm) VALUES ('$storyuser', '$title', '$story', '$tags', '$thumbnail', now())";
+						
+						if ($res = mysqli_query($conn, $insertinstoriesquery)){
+							// header("location: index.php");
+							echo "<script>window.location.href='index.php'</script>";
+						} else {
+							echo mysqli_error($conn);
+						}   
+			        }
+
+					echo $thumbnail;
+				} else {
+					echo "<script>alert('Only image files allowed(.png, .jpeg)')</script>";
+				}
 			} else {
-				echo mysqli_error($conn);
+				echo "<script>alert('choose image file to upload')</script>";
 			}
 
 		} else {

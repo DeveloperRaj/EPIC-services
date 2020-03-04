@@ -42,9 +42,9 @@
 	<section class="add-story-container">
 		<section class="form-container">
 			<form method="post">
-				<input type="text" class="inp" placeholder="Title of Story" name="nstl" value="<?= $storytitle ?>">
-				<textarea class="inp" placeholder="Story" name="nsdt"><?= $storydata ?></textarea>
-				<input type="text" class="inp" placeholder="Tags of Story" name="nstg" value="<?= $storytags ?>">
+				<input type="text" class="inp" placeholder="Title" name="nstl" value="<?= $storytitle ?>">
+				<textarea class="inp" placeholder="Writeup" name="nsdt"><?= $storydata ?></textarea>
+				<input type="text" class="inp" placeholder="Tags" name="nstg" value="<?= $storytags ?>">
 				<button type="submit" class="btn" name="sbmtedit">Save changes</button>
 			</form>
 		</section>

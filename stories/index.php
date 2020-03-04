@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Stories</title>
+	<title>Writeups</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/stories.css">
 	<script type="text/javascript" src="../assets/jquery.js"></script>
@@ -19,6 +19,10 @@
 	</section>
 
 	<section id="storiessContainer">
+
+		<script type="text/javascript">
+			storiessContainer.style.display = "none";
+		</script>
 
 		<?php
 			include '../public/header.php';
@@ -34,16 +38,16 @@
 				</section>
 				<section class="more-ops">
 					<a href="index.php?filter=latest" class="ctrl-btn">
-						Latest Stories
+						Latest Writeup
 					</a>
 					<a href="index.php?filter=weeklytop" class="ctrl-btn">
 						Top this week
 					</a>
 					<a href="index.php?filter=mystories" class="ctrl-btn">
-						My Stories
+						My Writeup
 					</a>
 					<a href="add.php" class="ctrl-btn">
-						Add New Story
+						Add New Writeup
 					</a>
 				</section>
 			</section>
@@ -115,7 +119,7 @@
 							<a <?= $storyopenpath ?>>
 								<section class="storyMain">
 									<section class="story-thumbnail">
-										<img src="../assets/images/GenModRender4.png">
+										<img src="thumbnails/GenModRender4.png">
 									</section>
 									<section class="story-title">
 										<?= $storytitle ?>
@@ -137,13 +141,14 @@
 								$storyid = $row['storyid'];
 								$storyuser = $row['storyuser'];
 								$storytitle = $row['storytitle'];
+								$storythumbnail = $row['thumbnail'];
 								$uploaddate = $row['dttm'];
 								$storyopenpath = "href=open.php?storyid=$storyid";
 				?>
 				<a <?= $storyopenpath ?>>
 					<section class="storyMain">
 						<section class="story-thumbnail">
-							<img src="../assets/images/GenModRender4.png">
+							<img src="thumbnails/<?= $storythumbnail ?>">
 						</section>
 						<section class="story-title">
 							<?= $storytitle ?>
@@ -158,7 +163,7 @@
 					 } 
 				?>
 			</section>
-			<section style="width: 100%;text-align: center;"><button onclick="window.location.reload();" style="border: none; background-color: none;margin-top: 50px;font-size: 18px;font-weight: bold">Click here to read more stories</button></section>
+			<section style="width: 100%;text-align: center;"><button onclick="window.location.reload();" style="border: none; background-color: none;margin-top: 50px;font-size: 18px;font-weight: bold">Click here to read more Writeup</button></section>
 		</section>
 
 		<?php 

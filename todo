@@ -2,7 +2,8 @@ Login:
 if user is banned, don't allow login
 
 Stories: 
-Implement Thumbnail uploader
+->Functioning reports
+->Implement Thumbnail uploader
 After implementation of banning user, implement filter to not show stories from banned users
 
 News stuff:

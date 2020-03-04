@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2020 at 01:21 PM
+-- Generation Time: Mar 04, 2020 at 05:58 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -37,21 +37,6 @@ CREATE TABLE `notes` (
   `dttm` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `notes`
---
-
-INSERT INTO `notes` (`noteid`, `noteuser`, `notetitle`, `notedata`, `notetags`, `dttm`) VALUES
-(4, 'tstsub2', 'hohoh cricket', 'bowl 10 overs\r\nbat 15 overs\r\nwicketkeeping 20 overs\r\n\r\ngym at 8:00 pm				', 'schedule', '2020-02-15 16:46:00'),
-(5, 'tstsub2', 'booo cricket', 'bowl 10 overs\r\nbat 15 overs\r\nwicketkeeping 50 overs\r\n\r\ngym at 8:00 pm																', 'schedule,asdhgbasd,sdsg', '2020-02-15 16:48:22'),
-(6, 'tstsub2', 'hohoh cricket', 'bowl 10 overs\r\nbat 15 overs\r\nwicketkeeping 20 overs\r\n\r\ngym at 8:00 pm				', 'schedule', '2020-02-15 16:50:35'),
-(7, 'tstsub2', 'hohoh cricket', 'bowl 10 overs\r\nbat 15 overs\r\nwicketkeeping 20 overs\r\n\r\ngym at 8:00 pm				', 'schedule', '2020-02-15 16:51:48'),
-(11, 'tstsub2', 'hohoh cricket', 'bowl 10 overs\r\nbat 15 overs\r\nwicketkeeping 20 overs\r\n\r\ngym at 8:00 pm				', 'schedule', '2020-02-15 17:15:32'),
-(14, 'rajpats22', 'Project deadline', 'complete story pages on project by next 2 days,\r\n\r\nsdafs \r\ndfg df\r\ngh fg\r\nhgfh \r\nsdf fg				', 'project,coding', '2020-02-16 11:38:59'),
-(15, 'rajpats22', 'sdfdsfg fh fgh fgh', 'dfg df dgdgdfdg\r\ndgd fgd \r\ngd\r\n fg df\r\ng df\r\ng d\r\nfg d\r\nfg d\r\n\r\ndfg df dgdgdfdg\r\ndgd fgd \r\ngd\r\n fg df\r\ng df\r\ng d\r\nfg d\r\nfg d\r\n', 'sdfdg', '2020-02-16 11:50:52'),
-(16, 'tstsub2', 'node practice', 'practice node everyday\r\ntill master of it\r\ndsaf\r\nsdfg dfg\r\n fgh f\r\nghf\r\ngh\r\ngh\r\nj\r\nghj\r\ngh\r\nj\r\ngj\r\n', 'node,js,javascript,pracitce', '2020-02-16 12:48:27'),
-(17, 'rickdead', 'daily task', 'kill all the zombies on fences\r\ngo on a run for healing medicine\r\n\r\nwalk happily :)', 'walking,run,task', '2020-02-16 14:30:59');
-
 -- --------------------------------------------------------
 
 --
@@ -64,6 +49,7 @@ CREATE TABLE `stories` (
   `storytitle` text,
   `storydata` text,
   `storytags` text,
+  `thumbnail` text NOT NULL,
   `dttm` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -71,11 +57,10 @@ CREATE TABLE `stories` (
 -- Dumping data for table `stories`
 --
 
-INSERT INTO `stories` (`storyid`, `storyuser`, `storytitle`, `storydata`, `storytags`, `dttm`) VALUES
-(1, 'rickdead', 'koda dolore tempor sint minim sed enim ullamco laborum non adipisicing ad ut consequat.', 'Mollit qui amet commodo exercitation velit aliquip minim dolore do mollit velit nulla aute dolor et culpa excepteur non et non deserunt in nisi cupidatat dolore ex laboris irure sed eiusmod voluptate elit commodo minim fugiat ad cupidatat ut duis ex nulla qui eiusmod proident sunt non esse qui enim dolore voluptate nisi cillum exercitation est qui nisi veniam excepteur proident in exercitation irure quis mollit dolore cupidatat eu ullamco ad exercitation nisi qui ex amet officia proident consectetur sit amet excepteur veniam dolore occaecat magna sit in consequat commodo nostrud ut labore exercitation officia dolor amet labore amet aliquip dolore nisi ex aliqua do elit et dolore ad pariatur eu aliqua elit adipisicing commodo exercitation cillum eu ex cupidatat laborum aute quis consectetur amet aliquip esse esse laborum eu veniam deserunt cupidatat officia ut quis dolore ullamco nostrud consectetur laborum velit tempor ullamco dolor velit aliquip ut laboris dolore do id minim dolor consequat pariatur ad tempor culpa pariatur voluptate commodo reprehenderit dolor sunt in culpa culpa sit dolore est aliquip culpa elit ad nisi dolore ex excepteur laborum cillum dolor fugiat proident velit sint voluptate in sed laboris tempor est cillum velit laborum.\r\n\r\nEiusmod et nostrud cupidatat sit non id reprehenderit sint laboris in sit eu eiusmod eiusmod minim dolor sit veniam aliqua proident esse qui exercitation pariatur fugiat consectetur aliqua anim laborum adipisicing aliqua sint amet id reprehenderit irure esse in deserunt esse duis mollit exercitation eiusmod amet nulla elit veniam dolor incididunt irure laboris ex ea anim eu quis pariatur mollit minim veniam reprehenderit do nisi enim exercitation et adipisicing ut reprehenderit nisi deserunt in est laboris ut nisi laboris qui non sunt mollit do consectetur dolore aliqua adipisicing voluptate in nostrud nulla dolore velit consequat quis aute nulla ullamco qui sed amet irure labore quis occaecat laborum nostrud ad anim do est fugiat dolor veniam consequat culpa officia dolore dolore dolor minim occaecat nulla commodo cupidatat dolore adipisicing commodo pariatur amet et fugiat nulla eu do duis id sit excepteur mollit laborum aliqua veniam mollit non dolor id deserunt sunt deserunt ut laboris eiusmod et dolor magna culpa ea exercitation cillum non ea elit aliqua occaecat nostrud sunt nisi officia ad minim ut consequat irure aliquip ex qui veniam ex in velit excepteur qui laboris quis officia consequat aute non nisi dolore labore ea cillum minim sed deserunt est consequat ut commodo eu elit duis quis adipisicing ea ex cillum in enim mollit ut aliquip dolor labore esse fugiat laboris dolore incididunt ut dolor excepteur reprehenderit sint laborum incididunt ut.', 'random,stuff,something', '2020-02-16'),
-(6, 'tstsub2', 'Lorem ipsum voluptate deserunt.', 'In est cupidatat officia ea culpa incididunt enim aute proident nisi sed incididunt cupidatat id labore nulla veniam culpa voluptate deserunt ad aliquip exercitation fugiat dolor adipisicing officia laboris nisi est adipisicing irure ullamco officia sit dolore dolore sint laborum minim cillum exercitation enim esse esse et ut ut enim duis nisi occaecat est irure eiusmod quis cupidatat fugiat in velit quis occaecat ea dolore aliqua sint commodo in in eiusmod veniam occaecat officia eu aliquip sunt culpa consequat id voluptate do deserunt sunt deserunt nulla fugiat amet aliqua minim cillum exercitation in aliqua dolor sunt sint nisi elit consectetur irure consectetur amet pariatur commodo in ut ut non anim eu cupidatat tempor aliqua ea adipisicing sed nulla et ut excepteur qui est labore excepteur eu duis occaecat consequat sunt nostrud do sunt aliqua aute proident elit laborum in laborum dolor laborum eu deserunt dolor quis est enim culpa irure cillum dolor officia pariatur nisi aliqua voluptate cupidatat mollit excepteur pariatur anim est sit duis aute officia pariatur quis nostrud occaecat aliquip consequat in consequat nulla aliqua ut dolore et pariatur dolore incididunt in ea reprehenderit voluptate incididunt do aute aliquip non quis dolore consectetur ex incididunt officia ut id veniam dolor sunt consectetur enim excepteur anim qui aliqua deserunt exercitation consectetur ea eu do.\r\n\r\nDeserunt velit nulla laborum sint do aliqua voluptate laboris ad labore ea in occaecat sit.', 'soo', '2020-02-17'),
-(7, 'tstsub2', 'Commodo duis voluptate aliquip pariatur id cupidatat dolore voluptate ullamco eu ut qui.', 'Velit exercitation in duis cupidatat deserunt eu ea ut voluptate pariatur voluptate amet laborum culpa reprehenderit ad quis aliquip deserunt nulla officia.\r\n\r\nAliqua sit cillum enim pariatur fugiat culpa cupidatat dolore aute laboris laboris in esse culpa pariatur sit deserunt officia non. Minim ut sint duis ut sint cillum velit ut velit ullamco aliqua velit id duis dolor laboris est eiusmod in dolore voluptate dolor veniam ea ullamco voluptate eu anim nostrud eiusmod veniam voluptate eu adipisicing ut dolor irure cillum culpa aute elit do enim eiusmod quis nostrud occaecat et anim nulla laboris incididunt non id exercitation do laborum ut ut nostrud in exercitation officia sunt dolore nisi et amet consequat in ut reprehenderit eu in incididunt sed aute esse dolore in aliqua pariatur eiusmod adipisicing eu incididunt cupidatat voluptate consectetur laborum nostrud velit adipisicing ut nostrud esse reprehenderit consequat do exercitation veniam fugiat in do do ullamco incididunt magna magna laborum enim eu cillum dolor dolor minim excepteur amet do nisi sed consectetur velit ullamco amet magna anim in tempor dolore elit et occaecat laboris culpa esse minim eiusmod in ullamco irure laboris mollit dolore ullamco reprehenderit quis mollit sit labore enim cillum mollit do aliquip elit qui tempor magna cupidatat aliquip sed dolore deserunt aliquip tempor ut reprehenderit veniam occaecat consequat exercitation minim ullamco in aute dolor et cillum in qui esse culpa deserunt mollit pariatur commodo nostrud et laboris nulla culpa incididunt qui eiusmod nulla in aliqua pariatur consectetur ut cillum minim cupidatat eu magna reprehenderit tempor minim reprehenderit in aliquip in officia in reprehenderit elit adipisicing consectetur proident.\r\n\r\nEsse in irure sunt sed in nostrud anim elit proident et ullamco laborum incididunt.', 'adfdfgdf', '2020-02-17'),
-(8, 'rickdead', 'dfgfgh', 'something i wanted to write, i always did\r\nidk where all these comes from, but it is what i feel everyday\r\nand i feel like it\'s the bloody truth', 'mystory', '2020-02-17');
+INSERT INTO `stories` (`storyid`, `storyuser`, `storytitle`, `storydata`, `storytags`, `thumbnail`, `dttm`) VALUES
+(2, 'devsteve', 'Why The Hell Would I Use Node.js?', 'JavaScriptâ€™s rising popularity has brought with it a lot of changes, and the face of web development today is dramatically different. The things that we can do on the web nowadays with JavaScript running on the server, as well as in the browser, were hard to imagine just several years ago, or were encapsulated within sandboxed environments like Flash or Java Applets.\r\n\r\nBefore digging into Node.js solutions, you might want to read up on the benefits of using JavaScript across the stack which unifies the language and data format (JSON), allowing you to optimally reuse developer resources. As this is more a benefit of JavaScript than Node.js specifically, we wonâ€™t discuss it much here. But itâ€™s a key advantage to incorporating Node in your stack.\r\n\r\nAs Wikipedia states: â€œNode.js is a packaged compilation of Googleâ€™s V8 JavaScript engine, the libuv platform abstraction layer, and a core library, which is itself primarily written in JavaScript.â€ Beyond that, itâ€™s worth noting that Ryan Dahl, the creator of Node.js, was aiming to create real-time websites with push capability, â€œinspired by applications like Gmailâ€. In Node.js, he gave developers a tool for working in the non-blocking, event-driven I/O paradigm.\r\n\r\nAfter over 20 years of stateless-web based on the stateless request-response paradigm, we finally have web applications with real-time, two-way connections.\r\nIn one sentence: Node.js shines in real-time web applications employing push technology over websockets. What is so revolutionary about that? Well, after over 20 years of stateless-web based on the stateless request-response paradigm, we finally have web applications with real-time, two-way connections, where both the client and server can initiate communication, allowing them to exchange data freely. This is in stark contrast to the typical web response paradigm, where the client always initiates communication. Additionally, itâ€™s all based on the open web stack (HTML, CSS and JS) running over the standard port 80.\r\n\r\nOne might argue that weâ€™ve had this for years in the form of Flash and Java Appletsâ€”but in reality, those were just sandboxed environments using the web as a transport protocol to be delivered to the client. Plus, they were run in isolation and often operated over non-standard ports, which may have required extra permissions and such.\r\n\r\nWith all of its advantages, Node.js now plays a critical role in the technology stack of many high-profile companies who depend on its unique benefits. The Node.js Foundation has consolidated all the best thinking around why enterprises should consider Node.js in a short presentation that can be found on the Node.js Foundationâ€™s Case Studies page.\r\n\r\nIn this Node.js guide, Iâ€™ll discuss not only how these advantages are accomplished, but also why you might want to use Node.jsâ€”and why notâ€”using some of the classic web application models as examples.', 'stevewrites,nodejs,node', 'secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png', '2020-03-04'),
+(3, 'devsteve', 'What I wish I knew when I started to work with React.js', 'After its initial release on May 29, 2013, React.js has taken over the internet. Itâ€™s not a secret that myself and many other developers owe their success to this amazing framework.\r\n\r\nWith Medium so full of React.js tutorials, I wish one of them told me these tips when I started.\r\n\r\nDonâ€™t need .bind(this) when using arrow function\r\nUsually, you will have something like this when you have a controlled component:\r\n\r\nclass Foo extends React.Component{  constructor( props ){    super( props );    this.handleClick = this.handleClick.bind(this);  }\r\n  handleClick(event){    // your event handling logic  }\r\n  render(){    return (      &lt;button type=\"button\"       onClick={this.handleClick}&gt;      Click Me      &lt;/button&gt;    );  }}\r\nYou write .bind(this) to every method that exists, because most tutorials tell you to do so. If you have several controlled components, you will end up with a fat stack of codes in your constructor(){}.\r\n\r\nInstead, you can:\r\nclass Foo extends React.Component{\r\n  handleClick = (event) =&gt;; {    // your event handling logic  }\r\n  render(){    return (      &lt;button type=\"button\"       onClick={this.handleClick}&gt;        Click Me      &lt;/button&gt;    );  }}\r\nHow?\r\n\r\nES6â€™s arrow function uses Lexical Scoping, which lets the method access the this of where itâ€™s triggered.\r\n\r\nWhen service workers work against you\r\nService workers are great for a progressive web app, which allows for offline access and optimizes for users with poor internet connections.\r\n\r\nBut when youâ€™re not aware that the service worker is caching your static files, you deploy your hot-fixes repeatedly.\r\n\r\nOnly to find your site is not updating. ?\r\n\r\nDonâ€™t panic, make sure in your src/index.js:\r\n\r\n// Make sure it\'s set to unregisterserviceWorker.unregister();\r\nAs of version 16.8, this line should be serverWorker.unregister() by default.\r\n\r\nBut if they decide to change again, youâ€™ll know where to look.\r\n\r\n99% of the time you donâ€™t need to eject\r\nCreate React App offers an option to yarn eject your project to customize your build process.\r\n\r\nI remember trying to customize the build process to have SVG images automatically inlined in our code. I spent hours just trying to understand the build process. We end up having an import file that injects SVG tags, and we increased the siteâ€™s loading speed by 0.0001 milliseconds.\r\n\r\nEjecting your React project is like popping the hood of your running car and changing the engine on the fly to run 1% faster.\r\n\r\nOf course, if youâ€™re already a Webpack master, itâ€™s worthwhile to customize the build process to tailor the projectâ€™s needs.\r\n\r\nWhen youâ€™re trying to deliver on time, focus your effort on where it moves the needle forward.', 'react,cheatsheet,beginner,stevewrites', 'reactphoto.png', '2020-03-04'),
+(4, 'KarlBlogs', 'How Do I Know I Will Enjoy My Authenticook Meal?', '1. Cuisines only found in homes: India is known for its CULTURAL DIVERSITY and the best way to experience this diversity is through food. But almost all of our Indian regional cuisines are cooked and available only at homes of people, with restaurants serving commercially prepared standardized food. And it is here that Authenticook plays such an important role of providing easy access to Indiaâ€™s regional cuisines through food experiences hosted by home-chefs at their homes.\r\n\r\n2. Food cooked or passed down by moms and grandmoms: Have you moved away from family for work and missing the food that your mom or grandmom cooked? While we canâ€™t find you a job in your hometown, we surely can bring you â€˜MAA KE HAATH KA KHANAâ€™ to the city where you live now. 98% of Authenticook hosts are women who have been cooking lovingly for the past 20- 30-40 and sometimes even 50+ years. They love being appreciated for their cooking talents and feeding people. Our home-chefs prepare a meal, keeping you in mind!!\r\n\r\n3. Empowering women and local communities: Something we take immense PRIDE in!! Authenticook is a great platform for women homemakers to start their own micro-entrepreneurial ventures. And itâ€™s not only an opportunity for them to generate some income but also helps them showcase their culinary skills and opens up social horizons (something, we young professionals take for granted sitting in our 100+ people-strong corporate jobs)\r\n', 'foodie,karlsays,foodbloging', 'blog-1.jpg', '2020-03-04');
 
 -- --------------------------------------------------------
 
@@ -87,14 +72,6 @@ CREATE TABLE `storylikes` (
   `storyid` int(11) DEFAULT NULL,
   `likeby` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `storylikes`
---
-
-INSERT INTO `storylikes` (`storyid`, `likeby`) VALUES
-(6, 'rickdead'),
-(6, 'tstsub2');
 
 -- --------------------------------------------------------
 
@@ -115,14 +92,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userid`, `username`, `email`, `fullname`, `pass`) VALUES
-(1, 'admin1', 'admin@gmail.com', 'im admin', 'admin123'),
-(2, 'subtst', 'testsubject@gmail.com', 'testsubject 1', '12121'),
-(3, 'rajpats123', 'rajpatel@gmail.ops', 'raj patel', 'Pppp12#3'),
-(4, 'nathan123', 'nathan@lastofus.com', 'nathan bhai', 'NatGeo12#'),
-(5, 'walker', 'alan@walker.com', 'alan walker', 'Iamfaded12#'),
-(7, 'tstsub2', 'testsub2@gmail.com', 'test subject2', 'TstSub#12'),
-(8, 'rajpats22', 'rajpatel123@gmail.com', 'Raj Patel', 'Rajkkqq!23'),
-(9, 'rickdead', 'rick@walking.com', 'Rick Grimes', 'Rick#12Dead');
+(1, 'devsteve', 'steve.dev@gmail.com', 'Steve White', 'SteveDev#12'),
+(2, 'KarlBlogs', 'worldkarltravel@gmail.com', 'Karl Traveller', 'Karl11#blog');
 
 --
 -- Indexes for dumped tables
@@ -164,19 +135,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `noteid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `noteid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `stories`
 --
 ALTER TABLE `stories`
-  MODIFY `storyid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `storyid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

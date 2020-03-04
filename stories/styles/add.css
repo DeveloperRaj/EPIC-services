@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|ZCOOL+XiaoWei&display=swap');
+
 .add-story-container {
 	width: 100%;
 	min-height: 600px;
@@ -30,6 +32,7 @@ form {
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-family: 'Poppins';
 }
 
 .inp:nth-child(1) { 
@@ -47,12 +50,31 @@ form {
 }
 
 .btn {
-	width: 90px;
+	width: 130px;
 	height: 50px;
 	background-color: rgb(70, 97, 116);
 	border: none;
 	border-radius: 10px;
 	margin-bottom: 10px;
+	font-family: 'Montserrat';
+	color: white;
+	font-size: 18px;
+}
+
+.thumbnail-uploader {
+	width: 80%;
+	height: 50px;
+	/*background: #123;*/
+	margin: 20px auto;
+}
+
+input[type="file"] {
+	font-family: 'Poppins';
+}
+
+.thumbnail-uploader label{
+	font-size: 18px;
+	font-family: 'Montserrat';
 }
 
 @media only screen and (max-width: 600px) {
