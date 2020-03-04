@@ -2,7 +2,6 @@ Login:
 if user is banned, don't allow login
 
 Stories: 
-Implement Top this week filter
 Implement Thumbnail uploader
 After implementation of banning user, implement filter to not show stories from banned users
 

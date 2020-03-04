@@ -60,8 +60,8 @@
 							$selectstoriesquery = "select * from stories order by storyid desc limit 20";
 						} 
 
-						else if ($_GET['filter'] == "latest") {
-
+						else if ($_GET['filter'] == "weeklytop") {
+							$selectstoriesquery = "select storyid from stories where dttm > date(now()) - interval 7 day";
 						} 
 
 						else if ($_GET['filter'] == "mystories") {
@@ -82,16 +82,63 @@
 						$selectstoriesquery = "select * from stories where storytags like '%$tagsToSearch%'";
 					}
 
-					$res = mysqli_query($conn, $selectstoriesquery);
-					$checkData = mysqli_num_rows($res);
+					if (isset($_GET['filter']) && $_GET['filter'] == "weeklytop") {
 
-					if ($checkData > 0){
-						while($row = mysqli_fetch_array($res)) {
+						$res = mysqli_query($conn, $selectstoriesquery);
+						$topweekdata = array();
+						while($row = mysqli_fetch_array($res)){
+							$checkLikes = "select * from storylikes where storyid = '".$row['storyid']."'";
+							$likesRes = mysqli_num_rows(mysqli_query($conn, $checkLikes));
+							$temparray = array("storyid" => $row['storyid'], "likes" => $likesRes);
+							array_push($topweekdata, $temparray);
+						}
+						for ($i = 0; $i < count($topweekdata); $i++) {
+							for($j = $i + 1; $j < count($topweekdata); $j++) {
+								if ($topweekdata[$j]["likes"] > $topweekdata[$i]["likes"]){
+									$temp = $topweekdata[$i];
+									$topweekdata[$i] = $topweekdata[$j];
+									$topweekdata[$j] = $temp;
+								}
+							}
+						}
+
+						for($i = 0; $i < count($topweekdata); $i++) {
+							$selecttopstoriesquery = "select * from stories where storyid = '".$topweekdata[$i]["storyid"]."'";
+							$res = mysqli_query($conn, $selecttopstoriesquery);
+							$row = mysqli_fetch_array($res);
 							$storyid = $row['storyid'];
 							$storyuser = $row['storyuser'];
 							$storytitle = $row['storytitle'];
 							$uploaddate = $row['dttm'];
 							$storyopenpath = "href=open.php?storyid=$storyid";
+						?>
+							<a <?= $storyopenpath ?>>
+								<section class="storyMain">
+									<section class="story-thumbnail">
+										<img src="../assets/images/GenModRender4.png">
+									</section>
+									<section class="story-title">
+										<?= $storytitle ?>
+									</section>
+									<section class="author">By~ <?= $storyuser ?></section>
+									<section class="uploadDate"><?= $uploaddate ?></section>
+								</section>
+							</a>
+					<?php 
+						}
+
+					} else {
+
+						$res = mysqli_query($conn, $selectstoriesquery);
+						$checkData = mysqli_num_rows($res);
+
+						if ($checkData > 0){
+							while($row = mysqli_fetch_array($res)) {
+								$storyid = $row['storyid'];
+								$storyuser = $row['storyuser'];
+								$storytitle = $row['storytitle'];
+								$uploaddate = $row['dttm'];
+								$storyopenpath = "href=open.php?storyid=$storyid";
 				?>
 				<a <?= $storyopenpath ?>>
 					<section class="storyMain">
@@ -106,6 +153,7 @@
 					</section>
 				</a>
 				<?php 
+							}
 						}
 					 } 
 				?>
