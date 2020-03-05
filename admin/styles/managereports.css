@@ -40,7 +40,7 @@
 }
 
 .header-main {
-	width: 14%;
+	width: 10%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -61,7 +61,7 @@
 }
 
 .data-main {
-	width: 14%;
+	width: 10%;
 	height: 40px;
 	display: flex;
 	justify-content: center;
@@ -90,12 +90,22 @@
 
 .option-main a{
 	text-decoration: none;
-	width: 70%;
-	height: 70%;
+	padding: 3px 7px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: white;
 	background-color: rgb(70, 97, 116);
 	font-size: 14px;
+}
+
+.header-main:nth-child(4),
+.data-main:nth-child(4) {
+	width: 30%;
+}
+
+.data-main:nth-child(4) {
+	display: block;
+	height: 33px;
+	padding-top: 7px;
 }

@@ -40,17 +40,13 @@
 }
 
 .header-main {
-	width: 14%;
-	height: 100%;
+	width: 17.5%;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: white;
 	font-family: 'Montserrat';
-}
-
-.header-main:last-of-type{
-	width: 30%;
 }
 
 .table-data-container {
@@ -61,7 +57,7 @@
 }
 
 .data-main {
-	width: 14%;
+	width: 17.5%;
 	height: 40px;
 	display: flex;
 	justify-content: center;
@@ -98,4 +94,22 @@
 	color: white;
 	background-color: rgb(70, 97, 116);
 	font-size: 14px;
+}
+
+.header-main:nth-child(1), .header-main:nth-child(2), .data-main:nth-child(1), .data-main:nth-child(2) {
+	width: 10%;
+}
+
+.data-main:nth-child(3){
+	display: block;
+	height: 33px;
+	padding-top: 7px;
+}
+
+.header-main:nth-child(3), .data-main:nth-child(3){
+	width: 32.5%;
+}
+
+.header-main:last-of-type{
+	width: 30%;
 }

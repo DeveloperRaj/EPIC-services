@@ -1,5 +1,6 @@
 <?php 
 	include("../public/top.php");
+	require '../database/conn.php';
 ?>
 
 <!DOCTYPE html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2020 at 05:58 PM
+-- Generation Time: Mar 05, 2020 at 05:40 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `epic`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `newsid` int(11) NOT NULL,
+  `newstitle` text,
+  `newsdata` text,
+  `newstags` text,
+  `thumbnail` text,
+  `dttm` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`newsid`, `newstitle`, `newsdata`, `newstags`, `thumbnail`, `dttm`) VALUES
+(1, 'Deserunt in. Minim ut.', 'Duis adipisicing anim amet do nisi deserunt reprehenderit mollit non eiusmod deserunt adipisicing non eu reprehenderit adipisicing proident consequat anim consectetur in sint ut id consectetur excepteur qui anim aliqua consectetur ut dolore labore culpa dolor tempor fugiat aliquip do aliqua pariatur nulla cillum labore ea duis duis fugiat fugiat pariatur tempor cillum adipisicing proident consectetur sed laborum aliquip sed deserunt in dolore deserunt dolore dolore veniam ex culpa fugiat duis ullamco proident et duis ut eu fugiat consequat et excepteur fugiat esse tempor sint sint voluptate magna laborum aliqua ea nisi exercitation aliqua in est est in exercitation dolore et in ad nulla excepteur ut in do laboris reprehenderit ad consequat in occaecat nulla nisi enim aute mollit est do dolore consectetur consectetur commodo commodo id culpa anim incididunt commodo qui reprehenderit irure elit tempor eu laboris velit esse deserunt dolore consectetur nisi ullamco fugiat elit aliqua fugiat elit ut elit magna sit ut in aute dolor in dolor consectetur elit officia nostrud culpa exercitation aliquip enim in occaecat elit fugiat cupidatat cillum sit voluptate.', 'asdasd', 'Penguins.jpg', '2020-03-05');
 
 -- --------------------------------------------------------
 
@@ -84,20 +106,27 @@ CREATE TABLE `users` (
   `username` varchar(15) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `fullname` varchar(255) DEFAULT NULL,
-  `pass` varchar(15) DEFAULT NULL
+  `pass` varchar(15) DEFAULT NULL,
+  `joinedat` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userid`, `username`, `email`, `fullname`, `pass`) VALUES
-(1, 'devsteve', 'steve.dev@gmail.com', 'Steve White', 'SteveDev#12'),
-(2, 'KarlBlogs', 'worldkarltravel@gmail.com', 'Karl Traveller', 'Karl11#blog');
+INSERT INTO `users` (`userid`, `username`, `email`, `fullname`, `pass`, `joinedat`) VALUES
+(1, 'devsteve', 'steve.dev@gmail.com', 'Steve White', 'SteveDev#12', '2020-03-04'),
+(2, 'KarlBlogs', 'worldkarltravel@gmail.com', 'Karl Traveller', 'Karl11#blog', '2020-03-04');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`newsid`);
 
 --
 -- Indexes for table `notes`
@@ -130,6 +159,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `newsid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `notes`

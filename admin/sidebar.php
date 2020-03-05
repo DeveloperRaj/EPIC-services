@@ -10,13 +10,12 @@
 	<section class="sidebar-container">
 		<section class="sidebar-header">Admin Navigation</section>
 		<section class="sidebar-nav-container">
+			<a href="index.php">Dashboard</a>
 			<a href="manageuser.php">Manage Users</a>
-			<a href="">Manage Stories</a>
-			<a href="">Add NEWS</a>
-			<a href="">View All NEWS</a>
-			<a href="">Edit NEWS</a>
-			<a href="">Delete NEWS</a>
-			<a href="">Resolve Reports</a>
+			<a href="managestories.php">Manage Stories</a>
+			<a href="addnews.php">Add NEWS</a>
+			<a href="managenews.php">View All NEWS</a>
+			<a href="managereports.php">Resolve Reports</a>
 		</section>
 	</section>
 </body>

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Lobster|Poppins&display=swap');
+
+.admin-container {
+	width: 100%;
+	height: calc(100vh - 100px);
+	display: flex;
+	margin-top: 10px;
+}
+
+.main-pannel {
+	width: 80%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.pannel-header {
+	padding: 15px;
+	font-family: 'Poppins';
+	color: rgb(26, 60, 88);
+	font-size: 22px;
+	margin-top: 50px;
+}
+
+form {
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.inp {
+	width: calc(90% - 7px);
+	padding-left: 7px; 
+	border: 1px solid rgba(40, 40, 40, 0.3);
+	background-color: rgba(166,239,140);
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Poppins';
+}
+
+.inp:nth-child(1) { 
+	height: 50px;
+}
+
+.inp:nth-child(2) { 
+	height: calc(300px - 20px);
+	width: calc(90% - 20px);
+	padding: 10px; 
+}
+
+.inp:nth-child(3) { 
+	height: 50px;
+}
+
+.btn {
+	width: 130px;
+	height: 50px;
+	background-color: rgb(70, 97, 116);
+	border: none;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	font-family: 'Montserrat';
+	color: white;
+	font-size: 18px;
+}
+
+.thumbnail-uploader {
+	width: 80%;
+	height: 50px;
+	/*background: #123;*/
+	margin: 20px auto;
+}
+
+input[type="file"] {
+	font-family: 'Poppins';
+}
+
+.thumbnail-uploader label{
+	font-size: 18px;
+	font-family: 'Montserrat';
+}

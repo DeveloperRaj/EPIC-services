@@ -17,7 +17,7 @@
 	<meta charset="UTF-8">
 	<title>Admin</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/manageuser.css">
+	<link rel="stylesheet" href="styles/managestories.css">
 	<link rel="stylesheet" href="styles/loader.css">
 	<script src="../assets/jquery.js"></script>
 </head>
@@ -31,82 +31,80 @@
 			?>
 			<section class="main-pannel">
 				<section class="user-data-container">
-					<section class="user-data-header">User Data</section>
+					<section class="user-data-header">Stories Data</section>
 					<section class="user-data-main">
 						<div class="table-header-container">
-							<div class="header-main">ID</div>
-							<div class="header-main">Username</div>
-							<div class="header-main">Notes</div>
-							<div class="header-main">Stories</div>
-							<div class="header-main">Warnings</div>
+							<div class="header-main">Story ID</div>
+							<div class="header-main">Uploader ID</div>
+							<div class="header-main">Title</div>
+							<div class="header-main">Date of Upload</div>
 							<div class="header-main">Options</div>
 						</div>
 						<div class="table-data-container">
 							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
 							<div class="data-main">1</div>
+							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main">0000-12-31</div>
 							<div class="option-container">
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
 								<div class="option-main"><a href="#">Delete</a></div>
 							</div>
 						</div>
+
 						<div class="table-data-container">
 							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
 							<div class="data-main">1</div>
+							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main">0000-12-31</div>
 							<div class="option-container">
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
 								<div class="option-main"><a href="#">Delete</a></div>
 							</div>
 						</div>
+						
 						<div class="table-data-container">
 							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
 							<div class="data-main">1</div>
+							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main">0000-12-31</div>
 							<div class="option-container">
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
 								<div class="option-main"><a href="#">Delete</a></div>
 							</div>
 						</div>
+						
 						<div class="table-data-container">
 							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
 							<div class="data-main">1</div>
+							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main">0000-12-31</div>
 							<div class="option-container">
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
 								<div class="option-main"><a href="#">Delete</a></div>
 							</div>
 						</div>
+						
 						<div class="table-data-container">
 							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
 							<div class="data-main">1</div>
+							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main">0000-12-31</div>
 							<div class="option-container">
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
 								<div class="option-main"><a href="#">Delete</a></div>
 							</div>
 						</div>
+						
 						<div class="table-data-container">
 							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
 							<div class="data-main">1</div>
+							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main">0000-12-31</div>
 							<div class="option-container">
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
