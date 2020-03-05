@@ -47,7 +47,7 @@
 						My Writeup
 					</a>
 					<a href="add.php" class="ctrl-btn">
-						Add New Writeup
+						Add Writeup
 					</a>
 				</section>
 			</section>
@@ -113,13 +113,14 @@
 							$storyid = $row['storyid'];
 							$storyuser = $row['storyuser'];
 							$storytitle = $row['storytitle'];
+							$storythumbnail = $row['thumbnail'];
 							$uploaddate = $row['dttm'];
 							$storyopenpath = "href=open.php?storyid=$storyid";
 						?>
 							<a <?= $storyopenpath ?>>
 								<section class="storyMain">
 									<section class="story-thumbnail">
-										<img src="thumbnails/GenModRender4.png">
+										<img src="thumbnails/<?= $storythumbnail ?>">
 									</section>
 									<section class="story-title">
 										<?= $storytitle ?>
