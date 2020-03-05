@@ -14,7 +14,7 @@
 			<a href="manageuser.php">Manage Users</a>
 			<a href="managestories.php">Manage Stories</a>
 			<a href="addnews.php">Add NEWS</a>
-			<a href="managenews.php">View All NEWS</a>
+			<a href="managenews.php">Manage News</a>
 			<a href="managereports.php">Resolve Reports</a>
 		</section>
 	</section>

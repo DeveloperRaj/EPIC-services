@@ -41,78 +41,26 @@
 							<div class="header-main">Warnings</div>
 							<div class="header-main">Options</div>
 						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
-							<div class="data-main">1</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
+						<?php 
+							$getAllUsersQuery = "select * from users";
+							$res = mysqli_query($conn, $getAllUsersQuery);
+							while($row = mysqli_fetch_array($res)){
+								$userid = $row['userid'];
+								$username = $row['username'];
+						?>
+							<div class="table-data-container">
+								<div class="data-main"><?= $userid ?></div>
+								<div class="data-main"><?= $username ?></div>
+								<div class="data-main">10</div>
+								<div class="data-main">5</div>
+								<div class="data-main">1</div>
+								<div class="option-container">
+									<div class="option-main"><button>Warn</button></div>
+									<div class="option-main"><button>Ban</button></div>
+									<div class="option-main"><button>Delete</button></div>
+								</div>
 							</div>
-						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
-							<div class="data-main">1</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
-							<div class="data-main">1</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
-							<div class="data-main">1</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
-							<div class="data-main">1</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">TstSub</div>
-							<div class="data-main">10</div>
-							<div class="data-main">5</div>
-							<div class="data-main">1</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
+						<?php } ?>
 					</section>
 				</section>
 			</section>
@@ -122,7 +70,7 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			const allDataDivs = document.getElementsByClassName('table-data-container');
-			const allOptionButtons = document.querySelectorAll(".option-container .option-main a");
+			const allOptionButtons = document.querySelectorAll(".option-container .option-main button");
 			let optionCounter = 0;
 			for(let i = 0; i < allDataDivs.length; i++) {
 				if (i % 2 == 0) {

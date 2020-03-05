@@ -88,7 +88,8 @@
 	align-items: center;
 }
 
-.option-main a{
+.option-main button{
+	border: none;
 	text-decoration: none;
 	width: 70%;
 	height: 70%;
