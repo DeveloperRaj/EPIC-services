@@ -1,0 +1,54 @@
+EPIC Folks - summary
+
+1) User side
+
+-> Account:
+		if ban status false: let log in
+		if ban status true : don't let login
+
+-> Notes: 
+		if Logged in: 
+			     	View All, 
+					Add, 
+					Open, 
+					Edit, 
+					Delete, 
+					Search
+
+		if not logged in : 
+					Redirect to Login page
+
+-> Writeups:
+		if not banned : 
+					if not logged in : 
+								can view all writeups, 
+								can read writeups, 
+								search for writeups,
+								can report writeups
+
+					if logged in : 
+								can add new writeups,
+								can edit their own writeups,
+								can like other's writeups,
+								can delete their own writeups
+
+		if banned : 
+					nobody would be able to see your writeups
+
+-> News:
+		if logged as admin: 
+					Add new news
+					edit old news
+					delete old news
+
+		if logged as user:
+					View all news
+					open and read news
+
+if admin:
+	add news
+	edit news
+	delete news
+	resolve reports from community
+	warn users
+	if already warned 2 times, ban user

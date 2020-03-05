@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap');
+
+.sidebar-container {
+	width: 20%;
+	height: calc(100vh - 130px);
+	background-color: rgb(166,239,140);
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.sidebar-header {
+	width: 100%;
+	height: 50px;
+	font-size: 22px;
+	color: rgb(26, 60, 88);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins';
+}
+
+.sidebar-nav-container {
+	width: 100%;
+	margin-top: 10px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.sidebar-nav-container a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	width: 70%;
+	height: 40px;
+	background-color: rgb(26, 60, 88);
+	font-family: 'Montserrat';
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}

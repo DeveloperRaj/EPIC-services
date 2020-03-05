@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Lobster|Poppins&display=swap');
+
+.admin-container {
+	width: 100%;
+	height: calc(100vh - 100px);
+	display: flex;
+	margin-top: 10px;
+}
+
+.main-pannel {
+	width: 80%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.user-data-container {
+	width: 100%;
+}
+
+.user-data-header {
+	width: (100% - 30px);
+	padding-left: 30px;
+	padding-top: 10px;
+	height: 50px;
+	color: rgb(26, 60, 88);
+	font-size: 26px;
+	font-family: 'Poppins';
+}
+
+.user-data-main{
+	width: 98%;
+	margin-left: 1%;
+}
+
+.table-header-container {
+	width: 100%;
+	height: 50px;
+	background-color: rgb(26, 60, 88);
+	display: flex;
+}
+
+.header-main {
+	width: 14%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: 'Montserrat';
+}
+
+.header-main:last-of-type{
+	width: 30%;
+}
+
+.table-data-container {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	margin-top: 7px;
+}
+
+.data-main {
+	width: 14%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+	font-family: 'Poppins';
+}
+
+.option-container {
+	width: 30%;
+	display: flex;
+	height: 40px;
+	justify-content: space-around;
+	font-family: 'Poppins';
+}
+
+.option-main{
+	width: 30%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

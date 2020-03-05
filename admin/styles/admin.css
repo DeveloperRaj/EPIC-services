@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.admin-container {
+	width: 100%;
+	height: calc(100vh - 100px);
+	display: flex;
+	margin-top: 10px;
+}
+
+.main-pannel {
+	width: 80%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.numerical-data-container {
+	width: 90%;
+	margin-left: 5%;
+	height: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.data-card-container {
+	width: 330px;
+	height: 190px;
+	background: linear-gradient(45deg, rgb(166,239,140), rgb(230,144,55));
+	border-radius: 15px;
+	margin: 20px 0px;
+}
+
+.card-header {
+	height: 80px;
+	color: white;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	padding: 10px 15px;
+	font-family: 'Poppins';
+}
+
+.card-data {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.card-data section {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 18px;
+	font-family: 'Montserrat';
+}
+
+.card-data .data-main {
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(26, 60, 88);
+}
+
+.link-main a {
+	width: 100%;
+	height: 40px;
+	background-color: rgb(26, 60, 88);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+}
