@@ -36,108 +36,38 @@
 						<div class="table-header-container">
 							<div class="header-main">Report ID</div>
 							<div class="header-main">Writeup ID</div>
-							<div class="header-main">Uploader ID</div>
+							<div class="header-main">Uploader</div>
 							<div class="header-main">Title</div>
 							<div class="header-main">Reported For</div>
 							<div class="header-main">Options</div>
 						</div>
+						<?php 
+							$getAllReportsQuery = "select * from reports";
+							$res = mysqli_query($conn, $getAllReportsQuery);
+							while($row = mysqli_fetch_array($res)){
+								$reportId = $row['reportid'];
+								$writeupId = $row['reportedstoryid'];
+								$reportReason = $row['reportreason'];
+								$getWriteUpData = "select * from stories where storyid = $writeupId";
+								$res2 = mysqli_query($conn, $getWriteUpData);
+								$row = mysqli_fetch_array($res2);
+								$uploaderId = $row['storyuser'];
+								$title = $row['storytitle'];
+						?>
 						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
+							<div class="data-main"><?= $reportId ?></div>
+							<div class="data-main"><?= $writeupId ?></div>
+							<div class="data-main"><?= $uploaderId ?></div>
+							<div class="data-main"><?= $title ?></div>
 							<div class="data-main">Spam</div>
 							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
+								<div class="option-main"><a href="readreport.php?storyid=<?= $writeupId ?>">Read</a></div>
 								<div class="option-main"><a href="#">Warn</a></div>
 								<div class="option-main"><a href="#">Ban</a></div>
 								<div class="option-main"><a href="#">SetPrivate</a></div>
 							</div>
 						</div>
-
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">Spam</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">Spam</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">Spam</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">Spam</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">Spam</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">Spam</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
-							</div>
-						</div>
+						<?php } ?>
 					</section>
 				</section>
 			</section>

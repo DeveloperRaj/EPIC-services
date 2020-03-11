@@ -78,7 +78,7 @@
 
 				<?php } ?>
 
-				<a style="background-color: red" href="#" class="ctrl-btn">Report</a>
+				<a style="background-color: red" href="doreport.php?storyid=<?= $_GET['storyid'] ?>" class="ctrl-btn">Report</a>
 				<?php 
 					if (isset($_SESSION['user']) && $_SESSION['user'] === $storyuser) {
 				?>
