@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="styles/managereports.css">
 	<link rel="stylesheet" href="styles/loader.css">
 	<script src="../assets/jquery.js"></script>
+	<script src="functionality.js"></script>
 </head>
 <body>
 	<section id="loader">Loading...</section>
@@ -51,20 +52,19 @@
 								$getWriteUpData = "select * from stories where storyid = $writeupId";
 								$res2 = mysqli_query($conn, $getWriteUpData);
 								$row = mysqli_fetch_array($res2);
-								$uploaderId = $row['storyuser'];
+								$uploader = $row['storyuser'];
 								$title = $row['storytitle'];
 						?>
 						<div class="table-data-container">
 							<div class="data-main"><?= $reportId ?></div>
 							<div class="data-main"><?= $writeupId ?></div>
-							<div class="data-main"><?= $uploaderId ?></div>
-							<div class="data-main"><?= $title ?></div>
-							<div class="data-main">Spam</div>
+							<div class="data-main"><?= $uploader ?></div>
+							<div class="data-main"><a href="read.php?storyid=$storyid"><?= $title ?></a></div>
+							<div class="data-main"><?= $reportReason ?></div>
 							<div class="option-container">
-								<div class="option-main"><a href="readreport.php?storyid=<?= $writeupId ?>">Read</a></div>
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">SetPrivate</a></div>
+								<div class="option-main"><button onclick="warnUser('<?= $uploader ?>', '<?= $reportReason ?>', true, '<?= $reportId ?>')">Warn</button></div>
+								<div class="option-main"><button onclick="banUser('<?= $uploader ?>', '<?= $reportReason ?>', true, '<?= $reportId ?>')">Ban</button></div>
+								<div class="option-main"><button onclick="privateStory('<?= $writeupId ?>', true, '<?= $reportId ?>')">SetPrivate</button></div>
 							</div>
 						</div>
 						<?php } ?>
@@ -77,7 +77,7 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			const allDataDivs = document.getElementsByClassName('table-data-container');
-			const allOptionButtons = document.querySelectorAll(".option-container .option-main a");
+			const allOptionButtons = document.querySelectorAll(".option-container .option-main button");
 			let optionCounter = 0;
 			for(let i = 0; i < allDataDivs.length; i++) {
 				if (i % 2 == 0) {

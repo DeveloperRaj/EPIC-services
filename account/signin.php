@@ -66,7 +66,7 @@
 
 		} else{
 
-			$selectusertologinquery = "select username, pass from users where username = '$user'";
+			$selectusertologinquery = "select username, pass from users where username = '$user' and username in (select username from banstatus where isbanned = 0)";
 			$res = mysqli_query($conn, $selectusertologinquery);
 			if ($res) {
 				$row = mysqli_fetch_array($res);

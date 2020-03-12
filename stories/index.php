@@ -57,15 +57,15 @@
 					if (!isset($_GET['searchStory'])) {
 
 						if (!isset($_GET['filter'])) {
-							$selectstoriesquery = "select * from stories where storyuser in (select username from banstatus WHERE isbanned = 0) order by rand() limit 20";
+							$selectstoriesquery = "select * from stories where storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1 order by rand() limit 20";
 						} 
 
 						else if($_GET['filter'] == "latest") {
-							$selectstoriesquery = "select * from stories where storyuser in (select username from banstatus WHERE isbanned = 0) order by storyid desc limit 20";
+							$selectstoriesquery = "select * from stories where storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1 order by storyid desc limit 20";
 						} 
 
 						else if ($_GET['filter'] == "weeklytop") {
-							$selectstoriesquery = "select storyid from stories where dttm > date(now()) - interval 7 day and storyuser in (select username from banstatus WHERE isbanned = 0)";
+							$selectstoriesquery = "select storyid from stories where dttm > date(now()) - interval 7 day and storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1";
 						} 
 
 						else if ($_GET['filter'] == "mystories") {
@@ -83,7 +83,7 @@
 
 					else {
 						$tagsToSearch = $_GET['storytags'];
-						$selectstoriesquery = "select * from stories where storytags like '%$tagsToSearch%' and storyuser in (select username from banstatus WHERE isbanned = 0)";
+						$selectstoriesquery = "select * from stories where storytags like '%$tagsToSearch%' and storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1";
 					}
 
 					if (isset($_GET['filter']) && $_GET['filter'] == "weeklytop") {
@@ -115,9 +115,9 @@
 							$storytitle = $row['storytitle'];
 							$storythumbnail = $row['thumbnail'];
 							$uploaddate = $row['dttm'];
-							$storyopenpath = "href=open.php?storyid=$storyid";
+							$storyopenpath = "open.php?storyid=$storyid";
 						?>
-							<a <?= $storyopenpath ?>>
+							<a href='<?= $storyopenpath ?>'>
 								<section class="storyMain">
 									<section class="story-thumbnail">
 										<img src="thumbnails/<?= $storythumbnail ?>">

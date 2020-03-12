@@ -85,7 +85,7 @@
 	align-items: center;
 }
 
-.option-main a{
+.option-main button{
 	text-decoration: none;
 	padding: 3px 10px;
 	display: flex;
@@ -94,6 +94,8 @@
 	color: white;
 	background-color: rgb(70, 97, 116);
 	font-size: 14px;
+	font-family: 'Poppins';
+	border: none;
 }
 
 .header-main:nth-child(1), .data-main:nth-child(1) {

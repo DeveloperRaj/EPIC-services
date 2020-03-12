@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="styles/manageuser.css">
 	<link rel="stylesheet" href="styles/loader.css">
 	<script src="../assets/jquery.js"></script>
+	<script src="functionality.js"></script>
 </head>
 <body>
 	<section id="loader">Loading...</section>
@@ -47,17 +48,20 @@
 							while($row = mysqli_fetch_array($res)){
 								$userid = $row['userid'];
 								$username = $row['username'];
+								$noteCount = mysqli_num_rows(mysqli_query($conn, "select * from notes where noteuser = '$username'"));
+								$storiesCount = mysqli_num_rows(mysqli_query($conn, "select * from stories where storyuser = '$username'"));
+								$warnings = mysqli_fetch_array(mysqli_query($conn, "select warns from banstatus where username = '$username'"));
 						?>
 							<div class="table-data-container">
 								<div class="data-main"><?= $userid ?></div>
 								<div class="data-main"><?= $username ?></div>
-								<div class="data-main">10</div>
-								<div class="data-main">5</div>
-								<div class="data-main">1</div>
+								<div class="data-main"><?= $noteCount ?></div>
+								<div class="data-main"><?= $storiesCount ?></div>
+								<div class="data-main"><?= $warnings['warns'] ?></div>
 								<div class="option-container">
-									<div class="option-main"><button>Warn</button></div>
-									<div class="option-main"><button>Ban</button></div>
-									<div class="option-main"><button>Delete</button></div>
+									<div class="option-main"><button onclick="warnUser('<?= $username ?>')">Warn</button></div>
+									<div class="option-main"><button onclick="banUser('<?= $username ?>')">Ban</button></div>
+									<div class="option-main"><button onclick="deleteUser('<?= $username ?>')">Delete</button></div>
 								</div>
 							</div>
 						<?php } ?>

@@ -1,3 +1,6 @@
+<?php 
+	include("top.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +23,12 @@
 				Quick Links
 			</section>
 			<section class="footer-main-body">
-				<a href="#">Home</a>
-				<a href="#">Personal Notes</a>
-				<a href="#">Stories</a>
-				<a href="#">NEWS flash</a>
-				<a href="#">Login</a>
-				<a href="#">Sign Up</a>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'index.php"'?>>Home</a>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'notes/"'?>>Personal Notes</a>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'stories/"'?>>Stories</a>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'news/"'?>>NEWS flash</a>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'account/signin.php"'?>>Sign In</a>
+				<a <?php echo 'href="'. $upFolderPlaceholder . 'account/signup.php"'?>>Sign Up</a>
 			</section>
 		</section>
 		<section class="footer-container links">

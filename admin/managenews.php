@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="styles/managenews.css">
 	<link rel="stylesheet" href="styles/loader.css">
 	<script src="../assets/jquery.js"></script>
+	<script src="functionality.js"></script>
 </head>
 <body>
 	<section id="loader"></section>
@@ -38,45 +39,24 @@
 							<div class="header-main">Date of Upload</div>
 							<div class="header-main">Options</div>
 						</div>
+						<?php 
+							$getAllNews = "select * from news";
+							$res = mysqli_query($conn, $getAllNews);
+							while($row = mysqli_fetch_array($res)){
+								$newsid = $row['newsid'];
+								$title = $row['newstitle'];
+								$udate = $row['dttm'];
+						?>
 						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
+							<div class="data-main"><?= $newsid ?></div>
+							<div class="data-main"><?= $title ?></div>
+							<div class="data-main"><?= $udate ?></div>
 							<div class="option-container">
-								<div class="option-main"><a href="#">Edit</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
+								<div class="option-main"><button onclick="editNews('<?= $newsid ?>')">Edit</button></div>
+								<div class="option-main"><button onclick="deleteNews('<?= $newsid ?>')">Delete</button></div>
 							</div>
 						</div>
-
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Edit</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Edit</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Edit</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
+					<?php } ?>
 					</section>
 				</section>
 			</section>
@@ -86,7 +66,7 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			const allDataDivs = document.getElementsByClassName('table-data-container');
-			const allOptionButtons = document.querySelectorAll(".option-container .option-main a");
+			const allOptionButtons = document.querySelectorAll(".option-container .option-main button");
 			let optionCounter = 0;
 			for(let i = 0; i < allDataDivs.length; i++) {
 				if (i % 2 == 0) {

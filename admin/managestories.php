@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="styles/managestories.css">
 	<link rel="stylesheet" href="styles/loader.css">
 	<script src="../assets/jquery.js"></script>
+	<script src="functionality.js"></script>
 </head>
 <body>
 	<section id="loader">Loading...</section>
@@ -35,82 +36,32 @@
 					<section class="user-data-main">
 						<div class="table-header-container">
 							<div class="header-main">Story ID</div>
-							<div class="header-main">Uploader ID</div>
+							<div class="header-main">Uploader</div>
 							<div class="header-main">Title</div>
 							<div class="header-main">Date of Upload</div>
 							<div class="header-main">Options</div>
 						</div>
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
+						<?php 
+							$getAllStories = "select * from stories";
+							$res = mysqli_query($conn, $getAllStories);
+							while($row = mysqli_fetch_array($res)){
+								$storyid = $row['storyid'];
+								$uploader = $row['storyuser'];
+								$storyTitle = $row['storytitle'];
+								$uploadDate = $row['dttm'];
+						?>
+							<div class="table-data-container">
+								<div class="data-main"><?= $storyid ?></div>
+								<div class="data-main"><?= $uploader ?></div>
+								<div class="data-main"><a href="read.php?storyid=<?= $storyid ?>"><?= $storyTitle ?></a></div>
+								<div class="data-main"><?= $uploadDate ?></div>
+								<div class="option-container">
+									<div class="option-main"><button onclick="warnUser('<?= $uploader ?>')">Warn</button></div>
+									<div class="option-main"><button onclick="banUser('<?= $uploader ?>')">Ban</button></div>
+									<div class="option-main"><button onclick="privateStory('<?= $storyid ?>')">SetPrivate</button></div>
+								</div>
 							</div>
-						</div>
-
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
-						
-						<div class="table-data-container">
-							<div class="data-main">1</div>
-							<div class="data-main">1</div>
-							<div class="data-main">In eu qui sunt sed qui duis irure velit excepteur non do.</div>
-							<div class="data-main">0000-12-31</div>
-							<div class="option-container">
-								<div class="option-main"><a href="#">Warn</a></div>
-								<div class="option-main"><a href="#">Ban</a></div>
-								<div class="option-main"><a href="#">Delete</a></div>
-							</div>
-						</div>
+						<?php } ?>
 					</section>
 				</section>
 			</section>
@@ -120,7 +71,7 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			const allDataDivs = document.getElementsByClassName('table-data-container');
-			const allOptionButtons = document.querySelectorAll(".option-container .option-main a");
+			const allOptionButtons = document.querySelectorAll(".option-container .option-main button");
 			let optionCounter = 0;
 			for(let i = 0; i < allDataDivs.length; i++) {
 				if (i % 2 == 0) {

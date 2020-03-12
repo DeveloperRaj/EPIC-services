@@ -193,7 +193,7 @@
 				$fullname = ltrim($fullname);
 				$fullname = rtrim($fullname);
 
-				$insertinusersquery = "insert into users(username, email, fullname, pass) VALUES('$username', '$email', '$fullname', '$pass1');";
+				$insertinusersquery = "insert into users(username, email, fullname, pass, joinedat) VALUES('$username', '$email', '$fullname', '$pass1', now());";
 				
 				if ($res = mysqli_query($conn, $insertinusersquery)){
 					echo "<script>window.location.href='signin.php'</script>";

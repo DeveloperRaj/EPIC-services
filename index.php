@@ -1,5 +1,6 @@
 <?php 
 	include("public/top.php");
+	require 'database/conn.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,74 +52,47 @@
 		<section class="top-stories">
 			<section class="ts-heading">Top Stories</section>
 			<section class="top-stories-body">
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="./assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
+				<?php 
+					$selectWeeklyTop = "select storyid from stories where dttm > date(now()) - interval 7 day and storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1";
+					$res = mysqli_query($conn, $selectWeeklyTop);
+					$topweekdata = array();
+					while($row = mysqli_fetch_array($res)){
+						$checkLikes = "select * from storylikes where storyid = '".$row['storyid']."'";
+						$likesRes = mysqli_num_rows(mysqli_query($conn, $checkLikes));
+						$temparray = array("storyid" => $row['storyid'], "likes" => $likesRes);
+						array_push($topweekdata, $temparray);
+					}
+					for ($i = 0; $i < count($topweekdata); $i++) {
+						for($j = $i + 1; $j < count($topweekdata); $j++) {
+							if ($topweekdata[$j]["likes"] > $topweekdata[$i]["likes"]){
+								$temp = $topweekdata[$i];
+								$topweekdata[$i] = $topweekdata[$j];
+								$topweekdata[$j] = $temp;
+							}
+						}
+					}
+					for($i = 0; $i < 4; $i++) {
+							$selecttopstoriesquery = "select * from stories where storyid = '".$topweekdata[$i]["storyid"]."'";
+							$res = mysqli_query($conn, $selecttopstoriesquery);
+							$row = mysqli_fetch_array($res);
+							$storyid = $row['storyid'];
+							$storyuser = $row['storyuser'];
+							$storytitle = $row['storytitle'];
+							$storythumbnail = $row['thumbnail'];
+							$uploaddate = $row['dttm'];
+							$storyopenpath = "stories/open.php?storyid=$storyid";
+				?>
+					<a href='<?= $storyopenpath ?>'>
+						<section class="storyMain">
+							<section class="story-thumbnail">
+								<img src="stories/thumbnails/<?= $storythumbnail ?>">
+							</section>
+							<section class="story-title"><?= $storytitle ?></section>
+							<section class="author">By~ <?= $storyuser ?></section>
+							<section class="uploadDate"><?= $uploaddate ?></section>
 						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="./assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="./assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
-				<section class="storyMain">
-					<section class="story-title">
-						<section class="titleMain">Lorem ipsum dolor sit amet, consectetur.</section>
-						<section class="authorMain">By ~ lorem ipsum</section>
-					</section>
-					<section class="story-thumbnail">
-						<img src="./assets/images/GenModRender4.png" height="100%" width="80%" alt="">
-					</section>
-					<section class="story-btns">
-						<section class="btn-main">
-							<span class="read-cont">Likes</span>&nbsp;btn
-						</section>
-						<section class="btn-main">
-							<span class="read-cont">Read Now</span>&nbsp;btn
-						</section>
-					</section>
-				</section>
+					</a>
+				<?php } ?>
 			</section>
 		</section>
 

@@ -84,9 +84,9 @@
 	align-items: center;
 }
 
-.option-main a{
+.option-main button {
 	text-decoration: none;
-	width: 70%;
+	width: 90%;
 	height: 70%;
 	display: flex;
 	justify-content: center;
@@ -94,16 +94,25 @@
 	color: white;
 	background-color: rgb(70, 97, 116);
 	font-size: 14px;
+	border: none;
+	font-family: 'Poppins';
 }
 
 .header-main:nth-child(1), .header-main:nth-child(2), .data-main:nth-child(1), .data-main:nth-child(2) {
 	width: 10%;
 }
 
+.data-main:nth-child(2) {
+	display: block;
+	height: 33px;
+	padding-top: 7px;
+}
+
 .data-main:nth-child(3){
 	display: block;
 	height: 33px;
 	padding-top: 7px;
+	padding-left: 10px;
 }
 
 .header-main:nth-child(3), .data-main:nth-child(3){

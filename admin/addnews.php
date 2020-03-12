@@ -54,13 +54,9 @@
 	<script type="text/javascript">
 
 		$(document).ready(function(){
-
 			$("input[data-usage='stags']").on("input", function(){
-
 				$(this).val($.trim($(this).val()));
-
 			});
-
 		});
 		
 	</script>
