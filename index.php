@@ -82,7 +82,7 @@
 							$uploaddate = $row['dttm'];
 							$storyopenpath = "stories/open.php?storyid=$storyid";
 				?>
-					<a href='<?= $storyopenpath ?>'>
+					<a href='<?= $storyopenpath ?>' class="story-container">
 						<section class="storyMain">
 							<section class="story-thumbnail">
 								<img src="stories/thumbnails/<?= $storythumbnail ?>">

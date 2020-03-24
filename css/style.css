@@ -297,16 +297,12 @@ body{
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
-	.storyMain{
-		width: 90%;
+	.top-stories-body {
+		justify-content: center;
+		align-items: center;
+	}
+	.story-container{
 		margin-top: 10px;
 		margin-bottom: 10px;
-	}
-	.tm-body{
-		margin-top: 50px;
-	}
-	.tm-member-container{
-		width: 90%;
-		border-left: 1px solid rgb(26, 60, 88);
 	}
 } 
