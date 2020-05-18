@@ -55,6 +55,10 @@
 				<?php 
 					$selectWeeklyTop = "select storyid from stories where dttm > date(now()) - interval 7 day and storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1";
 					$res = mysqli_query($conn, $selectWeeklyTop);
+					if (mysqli_num_rows($res) == 0) {
+						$selectWeeklyTop = "select storyid from stories where storyuser in (select username from banstatus where isbanned = 0) and ispublic = 1";
+						$res = mysqli_query($conn, $selectWeeklyTop);
+					}
 					$topweekdata = array();
 					while($row = mysqli_fetch_array($res)){
 						$checkLikes = "select * from storylikes where storyid = '".$row['storyid']."'";
